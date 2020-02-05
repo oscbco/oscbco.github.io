@@ -1,0 +1,2268 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./index.css">
+    <meta charset="UTF-8">
+    <title>oscbco's personal site - Today I learned</title>
+  </head>
+  <body>
+    <div id="nav">
+      <div>
+        <h1><a href="./index.html">oscbco</a></h1>
+        <a href="./index.html#about-me">About Me</a>
+        <a href="./today-i-solved.html">Today I Solved</a>
+        <a href="./practice.html">Practice</a>
+        <a href="./microblog.html">Microblog</a>
+      </div>
+    </div>
+
+    <div id="content">
+      <div class="portfolio-header">
+        <h1 class="tis-header">Today I Solved</h1>
+      </div>
+
+      <div id="tis-collection">
+        <div class="tis">
+            <div class="title">
+              Add git branch name to bash prompt
+            </div>
+            <div class="description">
+              Add the following lines to your ~/.bash_profile file<br />
+              <p class="code">
+                <span style="color: #f8f8f2">parse_git_branch</span> <span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">{</span><br />
+                &nbsp;&nbsp;<span style="color: #f8f8f2">git</span> <span style="color: #f8f8f2">branch</span> <span style="color: #f8f8f2">2&gt;</span> <span style="color: #f8f8f2">/dev/null</span> <span style="color: #f8f8f2">|</span> <span style="color: #f8f8f2">sed</span> <span style="color: #f8f8f2">-e</span> <span style="color: #e6db74">&#39;/^[^*]/d&#39;</span> <span style="color: #f8f8f2">-e</span> <span style="color: #e6db74">&#39;s/* \(.*\)/ (\1)/&#39;</span><br />
+                <span style="color: #f8f8f2">}</span><br />
+                <span style="color: #f8f8f2">export</span> <span style="color: #f8f8f2">PS1=</span><span style="color: #e6db74">&quot;\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ &quot;</span>
+              </p>
+              It works by editing the PS1 (Prompt string 1) variable.<br />
+            </div>
+            <div class="references">
+              <a href="http://coderwall.com/p/fasnya/add-git-branch-name-to-bash-prompt">Coderwall - Add git branch name to bash prompt</a>
+            </div>
+            <div class="tags">
+              <div class="created-at">2016-9-9</div>
+              <a href="">bash</a><a href="">git</a><a href="">linux</a>
+            </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Ammend a commit's author
+           </div>
+          <div class="description">
+            <p class="code">
+              <span style="color: #f8f8f2">$</span> <span style="color: #f8f8f2">git</span> <span style="color: #f8f8f2">commit</span> <span style="color: #f8f8f2">--amend</span> <span style="color: #f8f8f2">--author=</span><span style="color: #e6db74">&quot;author &lt;author@example.com&gt;&quot;</span>
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-09-25</div>
+            <a href="">git</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Ansible register and show variables
+          </div>
+          <div class="description">
+            <p class="code">
+              <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">name</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">See what groups am I in.</span><br />
+              &nbsp;&nbsp;<span style="color: #ae81ff">shell</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">groups</span><br />
+              &nbsp;&nbsp;<span style="color: #ae81ff">register</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">usergroups</span><br />
+              <br />
+              <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">name</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">Show what groups I am in</span><br />
+              &nbsp;&nbsp;<span style="color: #ae81ff">debug</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">var=usergroups.stdout</span><br />
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2018-9-24</div>
+            <a href="">ansible</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Use babel-eslint to support async syntax
+          </div>
+          <div class="description">
+            <p class="code">
+              $ npm install eslint@4.x babel-eslint@8 --save-dev
+            </p>
+          </div>
+          <div class="references">
+            <a href="https://www.npmjs.com/package/babel-eslint">NPM - babel-eslint</a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-3-5</div>
+            <a href="">babel</a><a href="">async/await</a><a href="">es6</a><a href="">eslint</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Markdown preview in Visual Studio Code
+          </div>
+          <div class="description">
+            Open markdown preview to the side with ctrl+k then press v
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-11-16</div>
+            <a href="">vscode</a><a href="">markdown</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Copy only newer or nonexistent files
+          </div>
+          <div class="description">
+            <p class="code">
+              $ cp -u
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-9-9</div>
+            <a href="">linux</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            performance.now()
+          </div>
+          <div class="description">
+            <p class="code">
+              <span style="color: #a6e22e">t0</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">performance</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">now</span><span style="color: #f8f8f2">();</span><br />
+              <span style="color: #75715e">// doSomething();</span><br />
+              <span style="color: #a6e22e">t1</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">performance</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">now</span><span style="color: #f8f8f2">();</span><br />
+              <span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Call to doSomething took &quot;</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">t1</span> <span style="color: #f92672">-</span> <span style="color: #a6e22e">t0</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot; milliseconds.&quot;</span><span style="color: #f8f8f2">);</span>
+            </p>
+          </div>
+          <div class="references">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now">MDN - performance.now()</a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2018-1-19</div>
+            <a href="">javascript</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Validate nginx conf files before restarting
+          </div>
+          <div class="description">
+            <p class="code">
+              <span style="color: #f8b6ce">$</span> <span style="color: #f8f8f2">nginx</span> <span style="color: #f8b6ce">-</span><span style="color: #f8f8f2">t</span>
+            </p>
+          </div>
+          <div class="references">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now">MDN - Performance.now</a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-9-16</div>
+            <a href="">javascript</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Concurrently
+          </div>
+          <div class="description">
+            Use concurrently to start both the frontend server and backend server.<br />
+            In package.json:
+            <p class="code">
+              <span style="color: #e6db74">&quot;start&quot;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&quot;concurrently \&quot;command1 arg\&quot; \&quot;command2 arg\&quot;&quot;</span>
+            </p>
+          </div>
+          <div class="references">
+            <a href="https://www.npmjs.com/package/concurrently">NPM - Concurrently</a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2018-1-31</div>
+            <a href="">javascript</a><a href="">node.js</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Write common characters in linux
+          </div>
+          <div class="description">
+            <p class="code">
+              `&nbsp;&nbsp;shift + u + 60<br />
+              ‒&nbsp;&nbsp;shift + u + 2012<br />
+              ✔&nbsp;&nbsp;shift + u + 2714<br />
+              á&nbsp;&nbsp;shift + u + E1<br />
+              é&nbsp;&nbsp;shift + u + E9<br />
+              í&nbsp;&nbsp;shift + u + ED<br />
+              ó&nbsp;&nbsp;shift + u + F3<br />
+              ú&nbsp;&nbsp;shift + u + FA<br />
+              ñ&nbsp;&nbsp;shift + u + F1<br />
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-11-5</div>
+            <a href="">linux</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Change the time in linux
+          </div>
+          <div class="description">
+            <p class="code">
+              # <span style="color: #f8f8f2">date</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">s</span> <span style="color: #e6db74">&quot;9:06:10&quot;</span>
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-10-11</div>
+            <a href="">linux</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Erase one word backwards in the linux shell
+          </div>
+          <div class="description">
+            Press ctrl + w
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-9-4</div>
+            <a href="">linux</a><a href="">shell</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            List all event listeners
+          </div>
+          <div class="description">
+            <p class="code">
+              <span style="color: #a6e22e">getEventListeners</span><span style="color: #f8f8f2">(document)</span>
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2018-5-13</div>
+            <a href="">javascript</a><a href="">dom</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Install only dependencies, not devDependencies
+          </div>
+          <div class="description">
+            <p class="code">
+                $ npm install --only=production
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2018-2-2</div>
+            <a href="">javascript</a><a href="">npm</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            To install node_modules in a non-default location
+          </div>
+          <div class="description">
+            With the command line, you can use the --prefix option<br /><br />
+            With ansible:<br />
+            <p class="code">
+              <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">name</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">APP Install node_modules on the parent directory for sharing</span><br />
+              &nbsp;&nbsp;<span style="color: #ae81ff">become</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">yes</span><br />
+              &nbsp;&nbsp;<span style="color: #ae81ff">become_user</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;{{</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">userweb</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">}}&quot;</span><br />
+              &nbsp;&nbsp;<span style="color: #ae81ff">become_method</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">sudo</span><br />
+              &nbsp;&nbsp;<span style="color: #ae81ff">shell</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">npm install {{ appdir_build }} --prefix={{ appdir_build }} --home=/opt/kanban</span>
+            </p>
+            <br />
+            <p class="code">
+              $ <span style="color: #f8f8f2">sudo</span> <span style="color: #f8f8f2">su</span> <span style="color: #f8f8f2">-s</span> <span style="color: #f8f8f2">/bin/bash</span> <span style="color: #f8f8f2">app-web</span> <span style="color: #f8f8f2">-c</span> <span style="color: #e6db74">&#39;npm install /opt/kanban/build --prefix=/opt/kanban/build --home=/opt/kanban&#39;</span><br />
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-9-9</div>
+            <a href="">javascript</a><a href="">npm</a><a href="">ansible</a>
+          </div>
+
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Change directory for a particular command only
+          </div>
+          <div class="description">
+            Use parenthesis and the boolean "AND" operator (&&):
+            <p class="code">
+              (cd /var/log && cp -- *.log ~/Desktop)
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-9-7</div>
+            <a href="">linux</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Disable chrome's "Translate this page" prompt
+          </div>
+          <div class="description">
+            <p class="code">
+              <span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;google&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;notranslate&quot;</span><span style="color: #f92672">&gt;</span>
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2018-9-5</div>
+            <a href="">chrome</a><a href="">html</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            git diff between repo file and work directory file
+          </div>
+          <div class="description">
+            <p class="code">
+              $ git diff HEAD:full/path/to/foo full/path/to/bar
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-9-14</div>
+            <a href="">git</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            UI: panes vs subwindows vs modals<br />
+          </div>
+          <div class="description">
+            <b>Subwindows</b>: Float freely and the user can freely resize, position, maximize, restore and close them<br />
+            <br />
+            <b>Panes</b>: Their position is preset, and the user can adjust their relative sizes by dragging the sash between them.<br />
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-9-18</div>
+            <a href="">ui</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Prevent chrome from requesting your keyring password
+          </div>
+          <div class="description">
+            Add the following parameter to your chrome launcher
+            <p class="code">
+              "runtimeArgs": ["--password-store=basic"]
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2018-9-5</div>
+            <a href="">chrome</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            "Can't upload zip modules to prestashop"
+          </div>
+          <div class="description">
+            <p class="code">
+              $ aptitude install php5-pclzip zip
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-6-19</div>
+            <a href="">php</a><a href="">zip</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Enable ctrl-arrow for moving word by word in bash
+          </div>
+          <div class="description">
+            Add the following lines to ~/.inputrc
+            <p class="code">
+              "\e[1;5C": forward-word<br />
+              "\e[1;5D": backward-word
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-6-19</div>
+            <a href="">linux</a><a href="">bash</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Get last segment of a url
+          </div>
+          <div class="description">
+            <p class="code">
+              <span style="color: #66d9ef">new</span> <span style="color: #a6e22e">URL</span><span style="color: #f8f8f2">(window.</span><span style="color: #a6e22e">location</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">href</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">pathname</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">split</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;/&#39;</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">pop</span><span style="color: #f8f8f2">()</span>
+            </p>
+          </div>
+          <div class="references">
+            <a href="https://stackoverflow.com/questions/4758103/last-segment-of-url">stackoverflow.com/questions/4758103/last-segment-of-url</a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2018-9-17</div>
+            <a href="">javascript</a><a href="">url</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Print to screen all text files found
+          </div>
+          <div class="description">
+            <p class="code">
+              $ find . -ipath "*tasks/*.yml" -printf "\n\n\n\n%p\n" -exec cat {} \;
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-9-4</div>
+            <a href="">linux</a><a href="">shell</a><a href="">find</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Send json via post method with curl
+          </div>
+          <div class="description">
+            <p class="code">
+              $ curl -X POST -H "Content-Type: application/json" -d '{"key":"val"}'
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-9-30</div>
+            <a href="">curl</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Issuing a command as a user with no shell
+          </div>
+          <div class="description">
+            <p class="code">
+              $ sudo su -s /bin/bash -c 'psql < ~/kanban/ddl/001.0001.sql app' app-web
+            </p>
+            More examples:
+            <p class="code">
+              $ sudo su labmin-web -c "(cd /home/labmin-web/labmin/server; psql labmin-db labmin-web < data.sql)" -s /bin/bash<br/>
+              $ su -s /bin/bash -c '/path/to/your/script' testuser<br/>
+              $ sudo su -s /bin/bash -c 'pm2 log' app-web<br/>
+              $ sudo -u apache whoami<br/>
+              $ sudo su -s /bin/bash -c 'psql app < /home/app-web/librusados/ddl/001.0001.sql' app-web
+            </p>
+
+
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-9-30</div>
+            <a href="">linux</a><a href="">su</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Setting up a parser that understands dynamic imports<br />
+            "dynamic import unexpected token"
+          </div>
+          <div class="description">
+            In your vscode settings:
+            <p class="code">
+              <span style="color: #e6db74">&quot;standard.options&quot;</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">{</span><br />
+              &nbsp;&nbsp;<span style="color: #e6db74">&quot;parser&quot;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&quot;babel-eslint&quot;</span><br />
+              <span style="color: #f8f8f2">}</span>
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2018-1-31</div>
+            <a href="">vscode</a><a href="">babel-eslint</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            JSX DOM elements vs React elements
+          </div>
+          <div class="description">
+            React treats JSX tags that start with a lowercase letter as DOM tags.
+            Be especially careful when using object properties as JSX elements,
+            if they start with a lowercase letter they will be treated as DOM tags regardless of the property name case.
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-7-7</div>
+            <a href="">react</a><a href="">jsx</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Make Babel ignore node_modules, output to a specified directory, copy files and watch
+          </div>
+          <div class="description">
+            <p class="code">
+              $ babel . --out-dir=../../build/dev/ --ignore='node_modules' --copy-files -w
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-8-23</div>
+            <a href="">babel</a><a href="">npm</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Cannot find java. Please use the --jdkhome switch
+          </div>
+          <div class="description">
+            Edit netbeans/netbeans-8.2/etc/netbeans.conf and set the corresponding setting. For example:
+            <p class="code">
+              netbeans_jdkhome="/usr/local/java/jdk1.8.0_131"
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-6-29</div>
+            <a href="">error</a><a href="">java</a><a href="">netbeans</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Disable ansible's host key checking at the inventory level
+          </div>
+          <div class="description">
+            In the corresponding server group in your inventory file:
+            <p class="code">
+              ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-9-14</div>
+            <a href="">ansible</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Make ansible report task status changed = false
+          </div>
+          <div class="description">
+            <p class="code">
+              <span style="color: #75715e"># this will never report &#39;changed&#39; status</span><br />
+              <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">shell</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">wall &#39;beep&#39;</span><br />
+              &nbsp;&nbsp;<span style="color: #ae81ff">changed_when</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">False</span>
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-9-9</div>
+            <a href="">ansible</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Test a single file from npm test using jest
+          </div>
+          <div class="description">
+            If npm test is an alias for "jest"
+            <p class="code">
+              $ npm run test -- ./path/to/the/test/file.js
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-11-1</div>
+            <a href="">npm</a><a href="">jest</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            mkdir create parent directories
+          </div>
+          <div class="description">
+            no error if existing, make parent directories as needed
+            <p class="code">
+              $ mkdir -p
+            </p>
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-9-27</div>
+            <a href="">linux</a><a href="">shell</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          "eslint block must not be padded by blank lines" vs "expected line before comment"
+        </div>
+        <div class="description">
+          Change the rule so that it allow comments at the start of a block
+          <p class="code">
+            <span style="color: #e6db74">&quot;lines-around-comment&quot;</span><span style="color: #f92672">:</span>&nbsp;<span style="color: #f8f8f2">[</span><br />
+            &nbsp;&nbsp;<span style="color: #e6db74">&quot;error&quot;</span><span style="color: #f8f8f2">,</span>&nbsp;<span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e6db74">&quot;allowBlockStart&quot;</span><span style="color: #f92672">:</span>&nbsp;<span style="color: #66d9ef">true</span><br />
+            &nbsp;&nbsp;<span style="color: #f8f8f2">}</span><br />
+            <span style="color: #f8f8f2">]</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2017-9-30</div>
+          <a href="">javascript</a><a href="">eslint</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Want to copy a project directory, except for node_modules, build and .vagrant?
+        </div>
+        <div class="description">
+          <p class="code">
+            $ rsync -rP ./origin/ ./destination/ --exclude=node_modules --exclude=build --exclude=.vagrant --exclude=.git
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-9-20</div>
+          <a href="">linux</a><a href="">shell</a><a href="">rsync</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          ENOSPC
+        </div>
+        <div class="description">
+          Increase the maximum number of files that can be watched
+          <p class="code">
+            $ echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sysctl -p
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-2-2</div>
+          <a href="">linux</a><a href="">webpack</a><a href="">babel</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Validate with visudo before copying sudoer file with Ansible
+        </div>
+        <div class="description">
+          Copy a new "sudoers" file into place, after passing validation with visudo
+          <p class="code">
+            <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">template</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">src=/mine/sudoers dest=/etc/sudoers validate=&#39;visudo -cf %s&#39;</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-9-9</div>
+          <a href="">linux</a><a href="">ansible</a><a href="">sudo</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          match multiple strings at the same time with grep
+        </div>
+        <div class="description">
+          Use the pipe operator
+          <p class="code">
+            $ ps aux | grep postgres | grep collector
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-2-19</div>
+          <a href="">linux</a><a href="">shelll</a><a href="">grep</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Stage deleted files
+        </div>
+        <div class="description">
+          To stage all manually deleted files you can use:
+          <p class="code">
+            $ git rm $(git ls-files --deleted)
+          </p>
+        </div>
+        <div class="references">
+          <a href="http://stackoverflow.com/questions/12373733/staging-deleted-files">stackoverflow.com/questions/12373733/staging-deleted-files</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-9-21</div>
+          <a href="">linux</a><a href="">ansible</a><a href="">sudo</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Find and kill a process in one line using bash and regex
+        </div>
+        <div class="description">
+          <p class="code">
+            $ ps aux | awk '/fileops/' | awk '{print $2}' | xargs kill
+          </p>
+        </div>
+        <div class="references">
+          <a href="https://stackoverflow.com/questions/3510673/find-and-kill-a-process-in-one-line-using-bash-and-regex">stackoverflow.com/questions/3510673/find-and-kill-a-process-in-one-line-using-bash-and-regex</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2017-9-1</div>
+          <a href="">linux</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Create a new ssh key pair
+        </div>
+        <div class="description">
+          In ~/.ssh
+          <p class="code">
+            $ ssh-keygen -t ed25519 -f ./vagrant_key -C "Key for all vagrant development machines"
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-2-18</div>
+          <a href="">ssh</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Handy static print function for Java
+        </div>
+        <div class="description">
+
+          <p class="code">
+            <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">static</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">T</span><span style="color: #f92672">&gt;</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">print</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">T</span> <span style="color: #f8f8f2">arg</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span><br />
+            &nbsp;&nbsp;<span style="color: #f8f8f2">System</span><span style="color: #f92672">.</span><span style="color: #a6e22e">out</span><span style="color: #f92672">.</span><span style="color: #a6e22e">println</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">arg</span><span style="color: #f92672">);</span><br />
+            <span style="color: #f92672">}</span>
+          </p>
+        </div>
+        <div class="references">
+          <a href="  https://stackoverflow.com/questions/7277757/why-cant-i-import-static-java-lang-system-out-println">stackoverflow.com/questions/7277757/why-cant-i-import-static-java-lang-system-out-println</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2017-10-13</div>
+          <a href="">java</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Make the tree command ignore node_modules
+        </div>
+        <div class="description">
+          <p class="code">
+            $ tree  --dirsfirst -aFI "node_modules|.git|.vagrant"
+          </p>
+          Additionally, you can make an alias in .bashrc
+          <p class="code">
+            alias tree='/usr/bin/tree  --dirsfirst -aFI "node_modules|.git|.vagrant"'
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-9-16</div>
+          <a href="">linux</a><a href="">shell</a><a href="">tree</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          PM2 processes.json file for an express app
+        </div>
+        <div class="description">
+          <p class="code">
+            <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;<span style="color: #e6db74">&quot;apps&quot;</span>&nbsp;:&nbsp;<span style="color: #f8f8f2">[{</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e6db74">&quot;name&quot;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<span style="color: #e6db74">&quot;kanban&quot;</span><span style="color: #f8f8f2">,</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e6db74">&quot;script&quot;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<span style="color: #e6db74">&quot;bin/www&quot;</span><span style="color: #f8f8f2">,</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e6db74">&quot;watch&quot;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<span style="color: #e6db74">&quot;./&quot;</span><span style="color: #f8f8f2">,</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e6db74">&quot;ignore_watch&quot;</span>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;node_modules&quot;</span><span style="color: #f8f8f2">],</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e6db74">&quot;log_date_format&quot;</span>&nbsp;:&nbsp;<span style="color: #e6db74">&quot;YYYY-MM-DD&nbsp;HH:mm&nbsp;Z&quot;</span><br />
+            &nbsp;&nbsp;<span style="color: #f8f8f2">}]</span><br />
+            <span style="color: #f8f8f2">}</span>
+          </p>
+          Start PM2 with:
+          <p class="code">
+            $ pm2 start processes.json
+          </p>
+
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-9-14</div>
+          <a href="">node.js</a><a href="">pm2</a><a href="">express</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Show the desktop with Win+D in XFCE
+        </div>
+        <div class="description">
+          Add the following lines to the file ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml:
+          <p class="code">
+            &lt;property name="&amp;lt;Super&amp;gt;d" type="string" value="show_desktop_key"/&gt;<br />
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-2-5</div>
+          <a href="">linux</a><a href="">xfce</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Disable default shared folder in Vagrant
+        </div>
+        <div class="description">
+          <p class="code">
+            <span style="color: #66d9ef">Vagrant</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">configure(</span><span style="color: #e6db74">&#39;2&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #66d9ef">do</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">config</span><span style="color: #f92672">|</span><br />
+            &nbsp;&nbsp;<span style="color: #f8f8f2">config</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">vm</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">synced_folder</span> <span style="color: #e6db74">&#39;.&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;/vagrant&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">disabled</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">true</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #75715e"># ...</span><br />
+            <span style="color: #66d9ef">end</span>
+          </p>
+        </div>
+        <div class="references">
+          <a href="http://superuser.com/questions/756758/is-it-possible-to-disable-default-vagrant-synced-folder">superuser.com/questions/756758/is-it-possible-to-disable-default-vagrant-synced-folder</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-10-4</div>
+          <a href="">vagrant</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Change the password of a postgresql user
+        </div>
+        <div class="description">
+          You'd have to use peer auth first:
+          <p class="code">
+            postgres=# ALTER USER postgres PASSWORD 'myPassword';
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-11-8</div>
+          <a href="">linux</a><a href="">ansible</a><a href="">sudo</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Using PM2 with Vagrant
+        </div>
+        <div class="description">
+          If you set up PM2 to watch files, enable usePolling in your ecosystem.config.js:
+          <p class="code">
+            usePolling: true
+          </p>
+        </div>
+        <div class="references">
+          <a href="https://github.com/paulmillr/chokidar/issues/242">github.com/paulmillr/chokidar/issues/242</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-9-19</div>
+          <a href="">vagrant</a><a href="">pm2</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Postman may change from a GET to a POST
+        </div>
+        <div class="description">
+          Cuando hay una redireccion, asi como las redirecciones permanentes 301 que cambian al protocolo https.
+          Entonces puede haber un cambio de POST a GET usando postman,
+          eso se arregla escribiendo la direccion final para que no haya redireccion.
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-9-30</div>
+          <a href="">postman</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          mkdir and cd all in one
+        </div>
+        <div class="description">
+          $_is a special parameter that holds the last argument of the previous command. The quote around $_ make sure it works even if the folder name contains spaces.
+          <p class="code">
+            mkdir foo && cd "$_"
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2017-9-6</div>
+          <a href="">linux</a><a href="">shell</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          example sudo config lines explained
+        </div>
+        <div class="description">
+          The root user can execute in all terminals as all users, all commands
+          <p class="code">
+            root ALL = (ALL) ALL
+          </p>
+          The wheel group can execute in all terminals as all users, all commands and doesn't need a password prompt to do that
+          <p class="code">
+            %wheel ALL=(ALL) NOPASSWD: ALL
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-9-7</div>
+          <a href="">linux</a><a href="">sudo</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Minutes to Hour and minutes in Java
+        </div>
+        <div class="description">
+          If your time is in a variable called t
+          <p class="code">
+            <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">hours</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">t</span> <span style="color: #f92672">/</span> <span style="color: #ae81ff">60</span><span style="color: #f92672">;</span> <span style="color: #75715e">//since both are ints, you get an int</span><br />
+            <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">minutes</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">t</span> <span style="color: #f92672">%</span> <span style="color: #ae81ff">60</span><span style="color: #f92672">;</span><br />
+            <span style="color: #f8f8f2">System</span><span style="color: #f92672">.</span><span style="color: #a6e22e">out</span><span style="color: #f92672">.</span><span style="color: #a6e22e">printf</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;%d:%02d&quot;</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">hours</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">minutes</span><span style="color: #f92672">);</span>
+          </p>
+        </div>
+        <div class="references">
+          <a href="https://stackoverflow.com/questions/5387371/how-to-convert-minutes-to-hours-and-minutes-hhmm-in-java">stackoverflow.com/questions/5387371/how-to-convert-minutes-to-hours-and-minutes-hhmm-in-java</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2017-10-20</div>
+          <a href="">java</a><a href="">time</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          List tables in a PostgreSQL schema
+        </div>
+        <div class="description">
+          In the current schema
+          <p class="code">
+            \dt
+          </p>
+          In all schemas
+          <p class="code">
+            \dt *.*
+          </p>
+          In a particular schema
+          <p class="code">
+            \dt public.*
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2017-6-8</div>
+          <a href="">postgresql</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Copy a public key to a remote server
+        </div>
+        <div class="description">
+          You will need root's password.
+          <p class="code">
+            ssh-copy-id -i ~/.ssh/mykey root@192.168.10.2
+          </p>
+          If you'd wish not to be asked for root's password, use vagrant's account to copy the key using sudo.
+          <p class="code">
+            cat ~/.ssh/mykey.pub | ssh vagrant@192.168.10.2 'cat | sudo tee -a /root/.ssh/authorized_keys && echo "Key copied"'
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-2-23</div>
+          <a href="">ssh</a><a href="">vagrant</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          OpenSSL certificate file types.
+        </div>
+        <div class="description">
+          <div class="extension">.csr</div> - This is a Certificate Signing Request<br />
+          <div class="extension">.pem</div> (privacy-enhanced mail)<br />
+          <div class="extension">.key</div> - This is a PEM formatted file containing just the private-key of a specific certificate<br />
+          <div class="extension">.cert .cer .crt</div> - A <div class="extension">.pem</div> (or rarely <div class="extension">.der</div>) formatted file with a different extension, one that is recognized by Windows Explorer as a certificate, which  <div class="extension">.pem</div> is not.<br />
+        </div>
+        <div class="references">
+          <a href="https://serverfault.com/a/9717">serverfault.com/a/9717</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-7-1</div>
+          <a href="">openssl</a><a href="">https</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Telling webpack where to find node_modules in case it's not in the same folder
+        </div>
+        <div class="description">
+          In my case my node_modules folder is in a different location, and only modifying resolve.modules didn't work well with webpack-dev-server.
+
+          This worked for me:
+          <p class="code">
+            <span style="color: #a6e22e">resolveLoader</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">modules</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&#39;/path/to/node_modules&#39;</span><span style="color: #f8f8f2">],</span><br />
+            <span style="color: #f8f8f2">},</span><br />
+            <span style="color: #a6e22e">resolve</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">modules</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&#39;/path/to/node_modules&#39;</span><span style="color: #f8f8f2">],</span><br />
+            <span style="color: #f8f8f2">}</span>
+          </p>
+        </div>
+        <div class="references">
+          <a href="https://github.com/webpack/webpack/issues/1083">github.com/webpack/webpack/issues/1083</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-2-6</div>
+          <a href="">webpack</a><a href="">npm</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Example of a sequelize where with and<br />
+        </div>
+        <div class="description">
+          <p class="code">
+            <span style="color: #66d9ef">if</span>&nbsp;<span style="color: #f8f8f2">(</span><span style="color: #a6e22e">req</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">query</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">filtertext</span><span style="color: #f8f8f2">)</span>&nbsp;<span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">config</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">where</span>&nbsp;<span style="color: #f92672">=</span>&nbsp;<span style="color: #a6e22e">Sequelize</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">and</span><span style="color: #f8f8f2">(</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">Sequelize</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">where</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">Sequelize</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">fn</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;unaccent&#39;</span><span style="color: #f8f8f2">,</span>&nbsp;<span style="color: #a6e22e">Sequelize</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">col</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;nombre&#39;</span><span style="color: #f8f8f2">)),</span>&nbsp;<span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">[</span><span style="color: #a6e22e">Sequelize</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">Op</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">iLike</span><span style="color: #f8f8f2">]</span><span style="color: #f92672">:</span>&nbsp;<span style="color: #a6e22e">Sequelize</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">fn</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;unaccent&#39;</span><span style="color: #f8f8f2">,</span>&nbsp;`</span><span style="color: #f92672">%</span><span style="color: #a6e22e">$</span><span style="color: #f8f8f2">{</span><span style="color: #a6e22e">req</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">query</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">filtertext</span><span style="color: #f8f8f2">}</span><span style="color: #f92672">%</span>`</span><span style="color: #f8f8f2">)</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">}),</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">Sequelize</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">where</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">Sequelize</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">fn</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;unaccent&#39;</span><span style="color: #f8f8f2">,</span>&nbsp;<span style="color: #a6e22e">Sequelize</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">col</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;nombre&#39;</span><span style="color: #f8f8f2">)),</span>&nbsp;<span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">[</span><span style="color: #a6e22e">Sequelize</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">Op</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">iLike</span><span style="color: #f8f8f2">]</span><span style="color: #f92672">:</span>&nbsp;<span style="color: #a6e22e">Sequelize</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">fn</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;unaccent&#39;</span><span style="color: #f8f8f2">,</span>&nbsp;`</span><span style="color: #f92672">%</span><span style="color: #a6e22e">f</span><span style="color: #f92672">%</span>`</span><span style="color: #f8f8f2">)</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">})</span><br />
+            &nbsp;&nbsp;<span style="color: #f8f8f2">);</span><br />
+            <span style="color: #f8f8f2">}</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2017-7-31</div>
+          <a href="">node.js</a><a href="">sequelize</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Clone from github with Ansible
+        </div>
+        <div class="description">
+          <p class="code">
+            <span style="color: #ae81ff">-&nbsp;name:&nbsp;SUDO&nbsp;Create&nbsp;and&nbsp;configure&nbsp;/etc/sudoers.d/{{&nbsp;useradmin&nbsp;}}&nbsp;file</span><br />
+            <span style="color: #ae81ff">&nbsp;&nbsp;lineinfile:&nbsp;dest=/etc/sudoers.d/{{&nbsp;useradmin&nbsp;}}&nbsp;line=&quot;Defaults&nbsp;env_keep+=SSH_AUTH_SOCK&quot;&nbsp;state=present&nbsp;create=yes&nbsp;owner=root&nbsp;group=root&nbsp;mode=&quot;u+rw,g-rwx,o-rwx&quot;</span><br />
+            <br />
+            <span style="color: #ae81ff">-&nbsp;name:&nbsp;APP&nbsp;Checkout&nbsp;git&nbsp;repo</span><br />
+            <span style="color: #ae81ff">&nbsp;&nbsp;become:&nbsp;no</span><br />
+            <span style="color: #ae81ff">&nbsp;&nbsp;git:&nbsp;repo=git@github.com:oscbco/kanban.git&nbsp;dest=/home/app-admin/kanban&nbsp;update=no</span><br />
+          </p>
+          <br />~/.ssh/config<br />
+          <p class="code">
+            ForwardAgent yes<br />
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-2-24</div>
+          <a href="">ansible</a><a href="">git</a><a href="">github</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Reading from an existing Dexie Database example
+        </div>
+        <div class="description">
+          <p class="code">
+            <span style="color: #66d9ef">let</span> <span style="color: #a6e22e">db</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #a6e22e">Dexie</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;fileops&#39;</span><span style="color: #f8f8f2">);</span><br />
+            <span style="color: #a6e22e">db</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">open</span><span style="color: #f8f8f2">().</span><span style="color: #a6e22e">then</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">function</span> <span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;<span style="color: #66d9ef">let</span> <span style="color: #a6e22e">windows</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">db</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">table</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;windows&#39;</span><span style="color: #f8f8f2">);</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">windows</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">toCollection</span><span style="color: #f8f8f2">().</span><span style="color: #a6e22e">first</span><span style="color: #f8f8f2">().</span><span style="color: #a6e22e">then</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">function</span> <span style="color: #f8f8f2">(window)</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(window.</span><span style="color: #a6e22e">id</span><span style="color: #f8f8f2">);</span><br />
+            &nbsp;&nbsp;<span style="color: #f8f8f2">});</span><br />
+            <span style="color: #f8f8f2">});</span><br />
+            <br />
+            <span style="color: #a6e22e">async</span> <span style="color: #a6e22e">count</span> <span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;<span style="color: #66d9ef">let</span> <span style="color: #a6e22e">count</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">await</span><br />
+            &nbsp;<span style="color: #a6e22e">appdb</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">count</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;windows&#39;</span><span style="color: #f8f8f2">);</span><br />
+            &nbsp;<span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;count&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">count</span><span style="color: #f8f8f2">);</span><br />
+            <span style="color: #f8f8f2">}</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-23-12</div>
+          <a href="">javascript</a><a href="">browser</a><a href="">indexeddb</a><a href="">dexie</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Fetch Example
+        </div>
+        <div class="description">
+          <p class="code">
+            <span style="color: #66d9ef">import</span> <span style="color: #e6db74">&#39;whatwg-fetch&#39;</span><span style="color: #f8f8f2">;</span><br />
+            <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">API_URL</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;/api&#39;</span><span style="color: #f8f8f2">;</span><br />
+            <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">API_HEADERS</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;<span style="color: #e6db74">&#39;Content-Type&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;application/json&#39;</span><br />
+            <span style="color: #f8f8f2">};</span><br />
+            <br />
+            <span style="color: #f8f8f2">window.</span><span style="color: #a6e22e">fetch</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">API_URL</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&#39;/cards/&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">API_HEADERS</span><span style="color: #f8f8f2">)</span><br />
+            <span style="color: #f8f8f2">.</span><span style="color: #a6e22e">then</span><span style="color: #f8f8f2">((</span><span style="color: #a6e22e">response</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">=&gt;</span> <span style="color: #a6e22e">response</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">json</span><span style="color: #f8f8f2">())</span> <span style="color: #75715e">// Takes a Response stream and reads it to completion</span><br />
+            &nbsp;&nbsp;<span style="color: #75715e">// It returns a promise that resolves with a JSON object</span><br />
+            &nbsp;&nbsp;<span style="color: #f8f8f2">.</span><span style="color: #a6e22e">then</span><span style="color: #f8f8f2">((</span><span style="color: #a6e22e">responseData</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">setState</span><span style="color: #f8f8f2">({</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">cards</span><span style="color: #f92672">:</span> <span style="color: #a6e22e">responseData</span><br />
+            &nbsp;&nbsp;<span style="color: #f8f8f2">});</span><br />
+            <span style="color: #f8f8f2">}).</span><span style="color: #66d9ef">catch</span><span style="color: #f8f8f2">((</span><span style="color: #a6e22e">error</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;Error fetching and parsing data&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">error</span><span style="color: #f8f8f2">);</span><br />
+            <span style="color: #f8f8f2">});</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-23-2</div>
+          <a href="">javascript</a><a href="">browser</a><a href="">fetch</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Changing a parameter properties
+        </div>
+        <div class="description">
+          <p class="code">
+            <span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;\nScenario 1: Modifying a referenced value (in this case an object&#39;s property):&quot;</span><span style="color: #f8f8f2">);</span><br />
+            <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">obj1</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span><span style="color: #a6e22e">a</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&quot;a&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">b</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&quot;b&quot;</span><span style="color: #f8f8f2">}</span><br />
+            <span style="color: #66d9ef">function</span> <span style="color: #a6e22e">changeObj1</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">obj</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">obj</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">newPropertyC</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;newPropertyC&quot;</span><span style="color: #f8f8f2">;</span><br />
+            <span style="color: #f8f8f2">}</span><br />
+            <span style="color: #a6e22e">changeObj1</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">obj1</span><span style="color: #f8f8f2">);</span><br />
+            <span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">JSON</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">stringify</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">obj1</span><span style="color: #f8f8f2">,</span> <span style="color: #66d9ef">null</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">));</span><br />
+            <span style="color: #75715e">//&nbsp;{</span><br />
+            <span style="color: #75715e">//&nbsp;&nbsp;&nbsp;&quot;a&quot;: &quot;a&quot;,</span><br />
+            <span style="color: #75715e">//&nbsp;&nbsp;&nbsp;&quot;b&quot;: &quot;b&quot;,</span><br />
+            <span style="color: #75715e">//&nbsp;&nbsp;&nbsp;&quot;c&quot;: &quot;c&quot;</span><br />
+            <span style="color: #75715e">//&nbsp;}</span><br />
+            <br />
+            <span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;\nScenario 2: Replacing the referenced value with a new one:&quot;</span><span style="color: #f8f8f2">);</span><br />
+            <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">obj2</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span><span style="color: #a6e22e">a</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&quot;a&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">b</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&quot;b&quot;</span><span style="color: #f8f8f2">}</span><br />
+            <span style="color: #66d9ef">function</span> <span style="color: #a6e22e">changeObj2</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">obj</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">obj</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;new string&quot;</span><span style="color: #f8f8f2">;</span><br />
+            <span style="color: #f8f8f2">}</span><br />
+            <span style="color: #a6e22e">changeObj2</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">obj2</span><span style="color: #f8f8f2">);</span><br />
+            <span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">JSON</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">stringify</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">obj2</span><span style="color: #f8f8f2">,</span> <span style="color: #66d9ef">null</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">));</span><br />
+            <span style="color: #75715e">//&nbsp;{</span><br />
+            <span style="color: #75715e">//&nbsp;&nbsp;&nbsp;&quot;a&quot;: &quot;a&quot;,</span><br />
+            <span style="color: #75715e">//&nbsp;&nbsp;&nbsp;&quot;b&quot;: &quot;b&quot;</span><br />
+            <span style="color: #75715e">//&nbsp;}</span>
+
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2017-9-5</div>
+          <a href="">javascript</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Failed to mount folders in Linux guest. This is usually because
+          the "vboxsf" file system is not available. Please verify that
+          the guest additions are properly installed in the guest and
+          can work properly.
+        </div>
+        <div class="description">
+          The command attempted was:
+          <p class="code">
+            mount -t vboxsf -o uid=`id -u vagrant`,gid=`getent group vagrant | cut -d: -f3` home_app-web_kanban /home/app-web/kanban<br />
+            mount -t vboxsf -o uid=`id -u vagrant`,gid=`id -g vagrant` home_app-web_kanban /home/app-web/kanban<br />
+            <br />
+            The error output from the last command was:<br />
+            <br />
+            stdin: is not a tty<br />
+            /sbin/mount.vboxsf: mounting failed with the error: No such device
+          </p>
+          Solved by:<br />
+          <p class="code">install vagrant vbguest plugin
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-2-19</div>
+          <a href="">error</a><a href="">vagrant</a><a href="">virtualbox</a><a href="">linux</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Reference Exceptions
+        </div>
+        <div class="description">
+          Trying to read an undeclared object throws a Reference Error<br />
+          Trying to read an undeclared property returns undefined<br />
+          Trying to read an non-existing position at an array returns undefined<br />
+          <p class="code">
+            <span style="color: #66d9ef">try</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">elem</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">filename</span><span style="color: #f92672">:</span> <span style="color: #a6e22e">newFiles</span><span style="color: #f8f8f2">[</span><span style="color: #a6e22e">keypath</span><span style="color: #f8f8f2">[</span><span style="color: #a6e22e">i</span><span style="color: #f8f8f2">]].</span><span style="color: #a6e22e">filename</span><span style="color: #f8f8f2">,</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">hasChild</span><span style="color: #f92672">:</span> <span style="color: #a6e22e">newFiles</span><span style="color: #f8f8f2">[</span><span style="color: #a6e22e">keypath</span><span style="color: #f8f8f2">[</span><span style="color: #a6e22e">i</span><span style="color: #f8f8f2">]].</span><span style="color: #a6e22e">child</span> <span style="color: #f92672">!==</span> <span style="color: #66d9ef">null</span><span style="color: #f8f8f2">,</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">hasSibling</span><span style="color: #f92672">:</span> <span style="color: #a6e22e">newFiles</span><span style="color: #f8f8f2">[</span><span style="color: #a6e22e">keypath</span><span style="color: #f8f8f2">[</span><span style="color: #a6e22e">i</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">!==</span> <span style="color: #66d9ef">undefined</span><br />
+            &nbsp;&nbsp;<span style="color: #f8f8f2">};</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">newFiles</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">newFiles</span><span style="color: #f8f8f2">[</span><span style="color: #a6e22e">keypath</span><span style="color: #f8f8f2">[</span><span style="color: #a6e22e">i</span><span style="color: #f8f8f2">]].</span><span style="color: #a6e22e">child</span><span style="color: #f8f8f2">;</span><br />
+            <span style="color: #f8f8f2">}</span> <span style="color: #66d9ef">catch</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">e</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">elem</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">undefined</span><span style="color: #f8f8f2">;</span><br />
+            &nbsp;&nbsp;<span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span><br />
+            <span style="color: #f8f8f2">}</span>
+          </p>
+          Here trying to access <span class="code-word">newFiles[keypath[i]]</span> can return undefined, and if one tries to read a property from undefined an exception will be thrown
+        </div>
+        <div class="tags">
+          <div class="created-at">2017-7-20</div>
+          <a href="">javascript</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Update package versions in package.json
+        </div>
+        <div class="description">
+          Install npm-check-updates
+          <p class="code">
+            $ npm install -g npm-check-updates
+          </p>
+          To print installed and available versions
+          <p class="code">
+            $ ncu
+          </p>
+          To update your package.json
+          <p class="code">
+            $ ncu -u
+          </p>
+        </div>
+        <div class="references">
+          <a href="https://www.npmjs.com/package/npm-check-updates">npmjs.com/package/npm-check-updates</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-25-2</div>
+          <a href="">javascript</a><a href="">node.js</a><a href="">npm</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Ansible Command Warnings
+        </div>
+        <div class="description">
+            By default since Ansible 1.8, Ansible will issue a warning when the shell or command module is used and the command appears to be similar to an existing Ansible module. For example, this can include reminders to use the ‘git’ module instead of shell commands to execute ‘git’. Using modules when possible over arbitrary shell commands can lead to more reliable and consistent playbook runs, and also easier to maintain playbooks:
+          <p class="code">
+            command_warnings = false
+          </p>
+          These warnings can be silenced by adjusting the following setting or adding warn=yes or warn=no to the end of the command line parameter string, like so:
+          <p class="code">
+            <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">name</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">usage of git that could be replaced with the git module</span><br />
+            &nbsp;&nbsp;<span style="color: #ae81ff">shell</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">git update foo warn=no</span><br />
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-9-13</div>
+          <a href="">ansible</a><a href="">shell</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Sequelize soft delete and unique indexes
+        </div>
+        <div class="description">
+          PostgreSQL doesn't consider two null values equal<br />
+          <a href="https://www.postgresql.org/docs/9.0/static/indexes-unique.html">postgresql.org/docs/9.0/static/indexes-unique</a><br />
+          So an index including name, and deletedAt wouldn't behave as expected<br /><br />
+          The solution is to add a default value to deletedAt so it's never null.
+          <p class="code">
+            <span style="color: #a6e22e">name</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">type</span><span style="color: #f92672">:</span> <span style="color: #a6e22e">DataTypes</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">TEXT</span><span style="color: #f8f8f2">,</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">allowNull</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">false</span><span style="color: #f8f8f2">,</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">unique</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;name_cod_del&#39;</span><br />
+            <span style="color: #f8f8f2">},</span><br />
+            <span style="color: #a6e22e">deletedAt</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">allowNull</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">false</span><span style="color: #f8f8f2">,</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">type</span><span style="color: #f92672">:</span> <span style="color: #a6e22e">DataTypes</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">DATE</span><span style="color: #f8f8f2">,</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">unique</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;name_cod_del&#39;</span><span style="color: #f8f8f2">,</span><br />
+            &nbsp;&nbsp;<span style="color: #a6e22e">defaultValue</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Date(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">)</span><br />
+            <span style="color: #f8f8f2">}</span>
+          </p>
+          Sequelize considers deletedAt default value as the default value by which the paranoid option picks up deleted fields.<br /><br />
+          So even though new Date (0) *is* in the past. Rows with it in the deletedAt field wouldn't be considered deleted.<br /><br />
+          Now however, restoration of soft deleted fields becomes problematic.
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-8-16</div>
+          <a href="">postman</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Example of a three vm vagrant file
+        </div>
+        <div class="description">
+          <p class="code">
+            <span style="color: #75715e"># -*- mode: ruby -*-</span><br />
+            <span style="color: #75715e"># vi: set ft=ruby :</span><br />
+            <br />
+            <span style="color: #66d9ef">Vagrant</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">configure(</span><span style="color: #e6db74">&quot;2&quot;</span><span style="color: #f8f8f2">)</span> <span style="color: #66d9ef">do</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">config</span><span style="color: #f92672">|</span><br />
+            &nbsp;&nbsp;<span style="color: #f8f8f2">config</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ssh</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">insert_key</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">false</span><br />
+            <br />
+            &nbsp;&nbsp;<span style="color: #f8f8f2">config</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">vm</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">provider</span> <span style="color: #e6db74">&quot;virtualbox&quot;</span> <span style="color: #66d9ef">do</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">vb</span><span style="color: #f92672">|</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">vb</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">gui</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">false</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">vb</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">memory</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;256&quot;</span><br />
+            &nbsp;&nbsp;<span style="color: #66d9ef">end</span><br />
+            <br />
+            <br />
+            &nbsp;&nbsp;<span style="color: #75715e"># Application Server 1</span><br />
+            &nbsp;&nbsp;<span style="color: #f8f8f2">config</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">vm</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">define</span> <span style="color: #e6db74">&quot;app1&quot;</span> <span style="color: #66d9ef">do</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">|</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">app</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">vm</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">box</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;debian/jessie64&quot;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">app</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">vm</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">hostname</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;orc-app1.dev&quot;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">app</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">vm</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">network</span> <span style="color: #e6db74">&quot;private_network&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">ip</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;192.168.60.4&quot;</span><br />
+            &nbsp;&nbsp;<span style="color: #66d9ef">end</span><br />
+            <br />
+            &nbsp;&nbsp;<span style="color: #75715e"># Application Server 2</span><br />
+            &nbsp;&nbsp;<span style="color: #f8f8f2">config</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">vm</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">define</span> <span style="color: #e6db74">&quot;app2&quot;</span> <span style="color: #66d9ef">do</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">|</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">app</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">vm</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">box</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;debian/jessie64&quot;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">app</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">vm</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">hostname</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;orc-app2.dev&quot;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">app</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">vm</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">network</span> <span style="color: #e6db74">&quot;private_network&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">ip</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;192.168.60.5&quot;</span><br />
+            &nbsp;&nbsp;<span style="color: #66d9ef">end</span><br />
+            <br />
+            &nbsp;&nbsp;<span style="color: #75715e"># Database Server</span><br />
+            &nbsp;&nbsp;<span style="color: #f8f8f2">config</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">vm</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">define</span> <span style="color: #e6db74">&quot;db&quot;</span> <span style="color: #66d9ef">do</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">db</span><span style="color: #f92672">|</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">db</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">vm</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">box</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;debian/jessie64&quot;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">db</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">vm</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">hostname</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;orc-db.dev&quot;</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">db</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">vm</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">network</span> <span style="color: #e6db74">&quot;private_network&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">ip</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;192.168.60.6&quot;</span><br />
+            &nbsp;&nbsp;<span style="color: #66d9ef">end</span><br />
+            <span style="color: #66d9ef">end</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-7-10</div>
+          <a href="">vagrant</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Generating a certificate with OpenSSL
+        </div>
+        <div class="description">
+          Generate private key
+          <p class="code">
+            $ openssl genpkey -algorithm RSA -out private_key.key -pkeyopt rsa_keygen_bits:2048
+          </p>
+          Viewing the generated key file
+          <p class="code">
+            openssl rsa -text -in private_key.key
+          </p>
+          Alternative:<br />
+          &nbsp;&nbsp;Generate a CSR (Certificate signing request) File
+          <p class="code">
+            openssl req -new -key fd.key -out fd.csr
+          </p>
+          &nbsp;&nbsp;Generate the 2048 rsa key and the certficate signing request all in one go (Interactive)
+          <p class="code">
+            openssl req -new -newkey rsa:2048 -nodes -keyout oscbco.key -out oscbco.csr
+          </p>
+          <br />Check the Certificate Signing Request<br />
+          <p class="code">
+            openssl req -text -in fd.csr -noout
+          </p>
+          <br />Step 1: Write Conf File: fd.conf<br />
+          <p class="code">
+            <span style="color: #66d9ef">[req]</span><br />
+            <span style="color: #a6e22e">default_bits&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #f92672">=</span><span style="color: #e6db74">&nbsp;2048</span><br />
+            <span style="color: #a6e22e">default_keyfile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #f92672">=</span><span style="color: #e6db74">&nbsp;privkey.pem&nbsp;&nbsp;</span><br />
+            <span style="color: #a6e22e">prompt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #f92672">=</span><span style="color: #e6db74">&nbsp;no</span><br />
+            <span style="color: #a6e22e">encrypt_key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #f92672">=</span><span style="color: #e6db74">&nbsp;no</span><br />
+            <span style="color: #a6e22e">distinguished_name&nbsp;&nbsp;</span><span style="color: #f92672">=</span><span style="color: #e6db74">&nbsp;dn</span><br />
+            <span style="color: #a6e22e">req_extensions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #f92672">=</span><span style="color: #e6db74">&nbsp;ext</span><br />
+            <br />
+            <span style="color: #66d9ef">[dn]</span><br />
+            <span style="color: #a6e22e">countryName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #f92672">=</span><span style="color: #e6db74">&nbsp;&quot;SV&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;C=</span><br />
+            <span style="color: #a6e22e">stateOrProvinceName&nbsp;</span><span style="color: #f92672">=</span><span style="color: #e6db74">&nbsp;&quot;San&nbsp;Salvador&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;ST=</span><br />
+            <span style="color: #a6e22e">localityName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #f92672">=</span><span style="color: #e6db74">&nbsp;&quot;Soyapango&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;L=</span><br />
+            <span style="color: #a6e22e">commonName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #f92672">=</span><span style="color: #e6db74">&nbsp;&quot;www.example.com&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;CN=</span><br />
+            <span style="color: #a6e22e">emailAddress&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #f92672">=</span><span style="color: #e6db74">&nbsp;&quot;webmaster@example.com&quot;&nbsp;#&nbsp;CN/emailAddress=</span>
+          </p>
+          Step 2: Issue the following command
+          <p class="code">
+            openssl req -new -config fd.conf -out oscbco.csr<br />
+            req:<br />
+            &nbsp;&nbsp;The req command primarily creates and processes certificate requests in PKCS#10 format. It can additionally create self-signed certificates for use as root CAs for example<br />
+            -new<br />
+            &nbsp;&nbsp;this option generates a new certificate request. It will prompt the user for the relevant field values. The actual fields prompted for and their maximum and minimum sizes are specified in the configuration file and any requested extensions.<br />
+            &nbsp;&nbsp;If the -key option is not used it will generate a new RSA private key using information specified in the configuration file.<br />
+             -config filename<br />
+            &nbsp;&nbsp;this allows an alternative configuration file to be specified, this overrides the compile time filename or any<br />
+            &nbsp;&nbsp;specified in the OPENSSL_CONF environment variable.
+          </p>
+          Generate a certificate instead of a csr
+          <p class="code">
+            openssl req -new -config fd.conf -x509 -days 365 -out oscbco.crt
+          </p>
+          Generate a csr from a crt
+          <p class="code">
+            openssl x509 -x509toreq -in oscbco.crt -out oscbco.csr -signkey privkey.pem
+          </p>
+          View the csr
+          <p class="code">
+            openssl req -text -in oscbco.csr -noout
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-7-1</div>
+          <a href="">linux</a><a href="">openssl</a><a href="">cryptography</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          ~/.inputrc example
+         </div>
+        <div class="description">
+          <p class="code">
+            <span style="color: #e6db74">&quot;\e[A&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">history</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">search</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">backward</span><br />
+            <span style="color: #e6db74">&quot;\e[B&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">history</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">search</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">forward</span><br />
+            <span style="color: #f8f8f2">set</span> <span style="color: #f8f8f2">show</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">all</span><span style="color: #f92672">-</span>if<span style="color: #f92672">-</span><span style="color: #f8f8f2">ambiguous</span> <span style="color: #f8f8f2">on</span><br />
+            <span style="color: #f8f8f2">set</span> <span style="color: #f8f8f2">completion</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">ignore</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">case</span> <span style="color: #f8f8f2">on</span><br />
+            <span style="color: #e6db74">&quot;\e[1;5C&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">forward</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">word</span><br />
+            <span style="color: #e6db74">&quot;\e[1;5D&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">backward</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">word</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2017-7-9</div>
+          <a href="">linux</a><a href="">shell</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Embed a base64 encoded svg in a stylesheet
+        </div>
+        <div class="description">
+          <p class="code">
+            <span style="color: #f92672">background:</span> <span style="color: #f92672">transparent</span> <span style="color: #f92672">url(</span><span style="color: #e6db74">&quot;data:image/svg+xml;base64,BASE64DATA&quot;</span><span style="color: #f92672">)</span> <span style="color: #f92672">no-repeat;</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-3-2</div>
+          <a href="">svg</a><a href="">css</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          && operator
+        </div>
+        <div class="description">
+          An idiom for accessing a property, only if its parent object exists.
+          Avoiding a TypeError exception in the process.
+          <p class="code">
+            <span style="color: #a6e22e">obj</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">person</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #a6e22e">obj</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">person</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">name</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-3-4</div>
+          <a href="">javascript</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Webpack externals example:
+        </div>
+        <div class="description">
+          Explicitly declaring React as an external dependency.
+          <p class="code">
+              <span style="color: #a6e22e">externals</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">{</span><br />
+              &nbsp;&nbsp;<span style="color: #a6e22e">react</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">{</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">root</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;React&#39;</span><span style="color: #f8f8f2">,</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">commonjs2</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;react&#39;</span><span style="color: #f8f8f2">,</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">commonjs</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;react&#39;</span><span style="color: #f8f8f2">,</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">amd</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;react&#39;</span><br />
+              &nbsp;&nbsp;<span style="color: #f8f8f2">}</span><br />
+              <span style="color: #f8f8f2">}</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-12-23</div>
+          <a href="">webpack</a><a href="">javascript</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Sample function for retrieving a query param
+        </div>
+        <div class="description">
+          <p class="code">
+            <span style="color: #66d9ef">export</span> <span style="color: #66d9ef">let</span> <span style="color: #a6e22e">getSearchParam</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">function</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">param</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><br />
+            &nbsp;&nbsp;<span style="color: #66d9ef">let</span> <span style="color: #a6e22e">url</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #a6e22e">URL</span><span style="color: #f8f8f2">(window.</span><span style="color: #a6e22e">location</span><span style="color: #f8f8f2">);</span><br />
+            &nbsp;&nbsp;<span style="color: #66d9ef">let</span> <span style="color: #a6e22e">params</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #a6e22e">URLSearchParams</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">url</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">search</span><span style="color: #f8f8f2">);</span><br />
+            <br />
+            &nbsp;&nbsp;<span style="color: #66d9ef">return</span> <span style="color: #a6e22e">params</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">get</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">param</span><span style="color: #f8f8f2">);</span><br />
+            <span style="color: #f8f8f2">};</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2017-5-30</div>
+          <a href="">javascript</a><a href="">browser</a><a href="">dom</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Form Submit
+        </div>
+        <div class="description">
+          Calling the <span class="code-word">submit()</span> method of a form does not trigger the "<span class="code-word">onsubmit</span>" handler or html validations<br /><br />
+          &lt;button type=button&gt; does not submit the form.<br /><br />
+        </div>
+        <div class="references">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit">MDN - HTMLFormElement/submit</a><br />
+          <a href="https://codesandbox.io/s/o7l2pl7n6z">Demo: codesandbox.io/s/o7l2pl7n6z</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2015-7-9</div>
+          <a href="">javascript</a><a href="">browser</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Node.js Module Caching
+        </div>
+        <div class="description">
+          Modules are cached after the first time they are loaded and the code inside them is only executed once.<br />
+          This is useful for modules that connect to databases,
+          since they won't try to connect to the database everytime the module is imported. <br />
+          Instead such modules return the same db connection.
+          This is where module internal variables come into play because they behave just like private variables.
+          The user of the module can only modify them through the module's API.<br />
+          Simple demo: <a href="https://repl.it/@oscbco/node-module-caching">repl.it/@oscbco/node-module-caching</a>
+        </div>
+        <div class="references">
+          <a href="https://nodejs.org/api/modules.html#modules_caching">Node docs - Modules (Caching)</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-3-3</div>
+          <a href="">javascript</a><a href="">nodejs</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          exports vs module.exports
+        </div>
+        <div class="description">
+          Like "<span class="code-word">require</span>", <span class="code-word">exports</span> is a special variable
+          available to modules.
+          It points to <span class="code-word">module.exports</span>, this is the reason why you can not set anything to it
+          as that would erase that reference<br />
+          You are only supposed to define its properties with values you wish to export.<br />
+          In the end it's <span class="code-word">module.exports</span> that is exported, and is perfectly valid to ignore <span class="code-word">exports</span>.<br>
+        </div>
+        <div class="references">
+          <a href="https://blog.tableflip.io/the-difference-between-module-exports-and-exports/">Tableflip - The difference between module.exports and exports</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-3-3</div>
+          <a href="">javascript</a><a href="">nodejs</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Simple Node.js static server
+        </div>
+        <div class="description">
+          Start a static server in less than 10 seconds<br /><br />
+          Step 1: Copy the following code to a <span class="code-word">index.js</span> file<br />
+          Step 2: <span class="code-word">$ node index.js</span><br />
+          Step 3: Visit the server on <a href="http://127.0.0.1:8125"><span class="code-word">http://127.0.0.1:8125</span></a>
+        </div>
+        <p class="code">
+          <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">http</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;http&#39;</span><span style="color: #f8f8f2">);</span><br />
+          <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">fs</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;fs&#39;</span><span style="color: #f8f8f2">);</span><br />
+          <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">path</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;path&#39;</span><span style="color: #f8f8f2">);</span><br />
+          <span style="color: #a6e22e">http</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">createServer</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">function</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">request</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">response</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><br />
+          &nbsp;&nbsp;<span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;request &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">request</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">url</span><span style="color: #f8f8f2">);</span><br />
+          &nbsp;&nbsp;<span style="color: #66d9ef">var</span> <span style="color: #a6e22e">filePath</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;.&#39;</span> <span style="color: #f92672">+</span> <span style="color: #a6e22e">request</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">url</span><span style="color: #f8f8f2">;</span><br />
+          &nbsp;&nbsp;<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">filePath</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;./&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">filePath</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;./index.html&#39;</span><span style="color: #f8f8f2">;</span><br />
+          &nbsp;&nbsp;<span style="color: #f8f8f2">}</span><br />
+          &nbsp;&nbsp;<span style="color: #66d9ef">var</span> <span style="color: #a6e22e">extname</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">String(</span><span style="color: #a6e22e">path</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">extname</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">filePath</span><span style="color: #f8f8f2">)).</span><span style="color: #a6e22e">toLowerCase</span><span style="color: #f8f8f2">();</span><br />
+          &nbsp;&nbsp;<span style="color: #66d9ef">var</span> <span style="color: #a6e22e">mimeTypes</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span><span style="color: #e6db74">&#39;.html&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;text/html&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;.js&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;text/javascript&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;.css&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;text/css&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;.json&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;application/json&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;.png&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;image/png&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;.jpg&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;image/jpg&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;.gif&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;image/gif&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;.wav&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;audio/wav&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;.mp4&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;video/mp4&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;.woff&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;application/font-woff&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;.ttf&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;application/font-ttf&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;.eot&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;application/vnd.ms-fontobject&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;.otf&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;application/font-otf&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;.svg&#39;</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;application/image/svg+xml&#39;</span><span style="color: #f8f8f2">};</span><br />
+          &nbsp;&nbsp;<span style="color: #66d9ef">var</span> <span style="color: #a6e22e">contentType</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">mimeTypes</span><span style="color: #f8f8f2">[</span><span style="color: #a6e22e">extname</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">||</span> <span style="color: #e6db74">&#39;application/octet-stream&#39;</span><span style="color: #f8f8f2">;</span><br />
+          &nbsp;&nbsp;<span style="color: #a6e22e">fs</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">readFile</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">filePath</span><span style="color: #f8f8f2">,</span> <span style="color: #66d9ef">function</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">error</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">content</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">error</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">error</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">code</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;ENOENT&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">fs</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">readFile</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;./404.html&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #66d9ef">function</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">error</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">content</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">response</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">writeHead</span><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">200</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">{</span> <span style="color: #e6db74">&#39;Content-Type&#39;</span><span style="color: #f92672">:</span> <span style="color: #a6e22e">contentType</span> <span style="color: #f8f8f2">});</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">response</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">end</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">content</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;utf-8&#39;</span><span style="color: #f8f8f2">);</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">});</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">}</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #66d9ef">else</span> <span style="color: #f8f8f2">{</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">response</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">writeHead</span><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">500</span><span style="color: #f8f8f2">);</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">response</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">end</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;Sorry, check with the site admin for error: &#39;</span><span style="color: #f92672">+</span><span style="color: #a6e22e">error</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">code</span><span style="color: #f92672">+</span><span style="color: #e6db74">&#39; ..\n&#39;</span><span style="color: #f8f8f2">);</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">response</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">end</span><span style="color: #f8f8f2">();</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">}</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">}</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #66d9ef">else</span> <span style="color: #f8f8f2">{</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">response</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">writeHead</span><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">200</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">{</span> <span style="color: #e6db74">&#39;Content-Type&#39;</span><span style="color: #f92672">:</span> <span style="color: #a6e22e">contentType</span> <span style="color: #f8f8f2">});</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">response</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">end</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">content</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;utf-8&#39;</span><span style="color: #f8f8f2">);</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f8f8f2">}</span><br />
+          &nbsp;&nbsp;<span style="color: #f8f8f2">});</span><br />
+          <br />
+          <span style="color: #f8f8f2">}).</span><span style="color: #a6e22e">listen</span><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">8125</span><span style="color: #f8f8f2">);</span><br />
+          <span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;Server running at http://127.0.0.1:8125/&#39;</span><span style="color: #f8f8f2">);</span>
+        </p>
+        <div class="references">
+          <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Node_server_without_framework">MDN - Node.js server without a framework</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-3-10</div>
+          <a href="">javascript</a><a href="">nodejs</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          XFCE starts with no desktop
+        </div>
+        <div class="description">
+          <p class="code">
+            $ xfdesktop
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-3-11</div>
+          <a href="">error</a><a href="">linux</a><a href="">xfce</a>
+        </div>
+      </div>
+      <div class="tis">
+        <div class="title">
+          Change screen brightness in XFCE
+        </div>
+        <div class="description">
+          Install <span class="code-word">xfce4-power-manager-plugins</span>. Then add the Power Manager Plugin to the task panel<br />
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-3-11</div>
+          <a href="">error</a><a href="">linux</a><a href="">xfce</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Render the page not zoomed in and with the the current device's width.
+        </div>
+        <div class="description">
+          <p class="code">
+            <span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;viewport&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;width=device-width, initial-scale=1&quot;</span><span style="color: #f92672">&gt;</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-10-6</div>
+          <a href="">html</a><a href="">browser</a><a href="">responsive</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Block select in Linux
+        </div>
+        <div class="description">
+          <p class="code">
+            ctrl + alt + mouse drag
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2016-10-6</div>
+          <a href="">linux</a><a href="">shell</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Why redux reducers are called that
+        </div>
+        <div class="description">
+          They are called reducers because they take an action and the old state and return a new state. <br />
+          They "reduce" the amount of items from 2 (action and old state) to 1 (new state)<br />
+          Think of the <span class="code-word">Array.reduce()</span> function which takes as its first parameter a
+          function.<br />
+          This function receives the acummulator and currentValue parameters and is run through the whole array
+          returning a single value.
+        </div>
+        <div class="tags">
+          <div class="created-at">2017-10-26</div>
+          <a href="">javascript</a><a href="">react</a><a href="">redux</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Show which website you downloaded a file from
+        </div>
+        <div class="description">
+          On Debian (Install the attr package first): <span class="code-word">&nbsp;$ getfattr -d file</span><br />
+          On Windows: <span class="code-word">&nbsp;> notepad file:Zone.Identifier</span><br />
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-3-15</div>
+          <a href="">linux</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          clear vs tput reset
+        </div>
+        <div class="description">
+          After using <span class="code-word">clear</span>, if you scroll the
+          screen up you realize it only moved the prompt to the top of the screen. This is troublesome when you need to
+          inspect long lists such as logs, directory listings, search results or compilation messages.<br />
+          If you really want to clear the screen, you can use <span class="code-word">$ tput reset</span><br /><br />
+          To reduce typing time you may add the <span class="code-word">$ cls</span> alias to your bash shell, like this:
+          <p class="code">
+            alias cls="tput reset"
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-3-17</div>
+          <a href="">linux</a><a href="">bash</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Preventing commands from littering your bash history
+        </div>
+        <div class="description">
+          Edit this line in your <span class="code-word">~/.bashrc</span> and add the commands you are not interested in seeing there.
+          <p class="code">
+            export HISTIGNORE="ls:pwd:exit:htop:su:clear:fb:cls:SU:reading:mve:reset:cmd"
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-3-17</div>
+          <a href="">linux</a><a href="">bash</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          currentColor with SVGs
+        </div>
+        <div class="description">
+          You can use currentColor variable with the stroke property in svg paths:
+          <p class="code">
+            <span style="color: #f92672">&lt;path</span> <span style="color: #a6e22e">d=</span><span style="color: #e6db74">&#39;m0.61405 290.96 3.6193 3.6193&#39;</span> <span style="color: #a6e22e">stroke=</span><span style="color: #e6db74">&#39;currentColor&#39;</span> <span style="color: #f92672">/&gt;</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-3-22</div>
+          <a href="">html</a><a href="">css</a><a href="">svg</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Screen locker for X
+        </div>
+        <div class="description">
+          You can inkove as is. But you'll most likely create a launcher to use it from your task bar
+          <p class="code">
+            $ i3lock -c 000000
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2018-1-21</div>
+          <a href="">linux</a><a href="">x</a><a href="">gui</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Vagrant compatible keys
+        </div>
+        <div class="description">
+          The private key you're attempting to use with this Vagrant box uses
+          an unsupported encryption type. The SSH library Vagrant uses does not support
+          this key type. Please use `ssh-rsa` or `ssh-dss` instead. Note that
+          sometimes keys in your ssh-agent can interfere with this as well,
+          so verify the keys are valid there in addition to standard
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-2-31</div>
+          <a href="">vagrant</a><a href="">ssh</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Trim whitespace on save in Sublime Text
+        </div>
+        <div class="description">
+          Add this to your settings: <br>
+          <p class="code">
+            <span style="color: #e6db74">&quot;trim_trailing_white_space_on_save&quot;</span>: <span style="color: #66d9ef">true</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-2-31</div>
+          <a href="">sublime</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Unstage all files
+        </div>
+        <div class="description">
+          <p class="code">
+            git reset
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-4-18</div>
+          <a href="">git</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Viewing live error logs for PM2, which is run by a service account with no shell
+        </div>
+        <div class="description">
+          <p class="code">
+            sudo su service-user -c "pm2 logs" -s /bin/bash
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-4-20</div>
+          <a href="">linux</a><a href="">nodejs</a><a href="">pm2</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Determine why a package was installed
+        </div>
+        <div class="description">
+          <p class="code">
+            $ sudo aptitude why libjs-jquery<br /><br />
+            i   task-xfce-desktop Recommends quodlibet<br />
+            i A quodlibet         Depends    exfalso (= 3.2.2-1)<br />
+            i A exfalso           Depends    libjs-sphinxdoc (>= 1.0)<br />
+            i A libjs-sphinxdoc   Depends    libjs-jquery (>= 1.4)
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-5-10</div>
+          <a href="">linux</a><a href="">debian</a><a href="">apt</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          nano
+        </div>
+        <div class="description">
+          <p class="code">
+            Exit insert mode:  Esc<br />
+            Go to end of file: Ctrl + _ then Ctrl + v | Alt + \<br />
+            Go to beginning of file: Alt + \
+          </p>
+        </div>
+        <div class="references">
+          <a href="https://unix.stackexchange.com/questions/420891/nano-jump-to-end-of-file">Unix Stackexchange - Nano - jump to end of file</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-5-12</div>
+          <a href="">linux</a><a href="">nano</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Bash starting directory
+        </div>
+        <div class="description">
+          Normally bash sessions start at your home directory, you can change that by cd-ing there in your ~/.bashrc file:
+          <p class="code">
+            cd ~/Projects/sites/@vm
+          </p>
+          Caveat: This is not advisable if you use integrated terminals like VSCode's where you expect your starting directory to be your currently opened folder. This will break that behavior.
+        </div>
+        <div class="references">
+          <a href="https://askubuntu.com/questions/226417/short-cut-for-switching-to-a-given-directory">Ask Ubuntu - Short-cut for switching to a given directory</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-5-22</div>
+          <a href="">linux</a><a href="">bash</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Bash "bookmarks"
+        </div>
+        <div class="description">
+          Put directory paths in environment variables, like this:<br />
+          In your ~/.bashrc file:
+          <p class="code">
+            export vm=~/Projects/sites/@vm
+          </p>
+          Then in your console, you can type:
+          <p class="code">
+            cd $vm
+          </p>
+        </div>
+        <div class="references">
+          <a href="https://askubuntu.com/questions/226417/short-cut-for-switching-to-a-given-directory">Ask Ubuntu - Short-cut for switching to a given directory</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-5-22</div>
+          <a href="">linux</a><a href="">bash</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Make VS Code integrated terminal start in a user-defined folder
+        </div>
+        <div class="description">
+          <p class="code">
+            "terminal.integrated.cwd": "./source/server"
+          </p>
+          You'll want to change this in your workspace settings rather than in your user settings, since not all projects are the same.
+        </div>
+        <div class="references">
+          <a href="https://stackoverflow.com/questions/43305050/changing-default-path-of-visual-studio-code-integrated-terminal">Stack Overflow - Changing default path of VSCode integrated terminal</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-5-23</div>
+          <a href="">vs code</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Error: Failed to set permissions on the temporary files Ansible needs to create when becoming an unprivileged user
+        </div>
+        <div class="description">
+          Use pipelining:<br /><br />
+          In your ansible.cfg file:
+          <p class="code">
+              [ssh_connection]<br />
+              pipelining=True
+          </p>
+          or in your inventory:
+          <p class="code">
+            192.168.10.4 ansible_ssh_pipelining='yes'
+          </p>
+        </div>
+        <div class="references">
+          <a href="https://github.com/plone/ansible.plone_server/issues/86#issuecomment-226457346">github.com/plone/ansible.plone_server/issues/86#issuecomment-226457346</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-5-29</div>
+          <a href="">linux</a><a href="">ansible</a><a href="">error</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          PostgreSQL's DROP DATABASE NOT WORKING?
+        </div>
+        <div class="description">
+          You probably forgot the semicolon at the end
+        </div>
+        <div class="references">
+          <a href="https://stackoverflow.com/questions/9044379/postgresql-drop-database-but-db-is-still-there">stackoverflow.com/questions/9044379/postgresql-drop-database-but-db-is-still-there</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-5-29</div>
+          <a href="">postgresql</a><a href="">error</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          PostgreSQL ansible modules' login_unix_socket parameter
+        </div>
+        <div class="description">
+          When using ansible's PostgreSQL modules is not necessary to use the "login_unix_socket" parameter if your "login_host" is "/var/run/postgresql"
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-5-30</div>
+          <a href="">postgresql</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Trim whitespace from ansible variables
+        </div>
+        <div class="description">
+          For example:<br />
+          <p class="code">
+            {{ variable.stdout | trim }}
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-5-30</div>
+          <a href="">ansible</a><a href="">yaml</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Sample ~/.gitconfig
+        </div>
+        <div class="description">
+          <p class="code">
+            [user]<br />
+            &nbsp;&nbsp;name = Name Surname<br />
+            &nbsp;&nbsp;email = nsurname@example.com<br />
+            [push]<br />
+            &nbsp;&nbsp;followTags = true
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-6-3</div>
+          <a href="">git</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Replance new line escape sequences with proper new lines in ansible error messages
+        </div>
+        <div class="description">
+          Add these lines to your ansible.cfg<br />
+          (Global ansible.cfg is in /etc/ansible/ansible.cfg)
+          <p class="code">
+            [defaults]<br />
+            <br />
+            stdout_callback=debug<br />
+            stderr_callback=debug<br />
+          </p>
+          Change errors to a more readable color
+          <p class="code">
+            [colors]<br />
+            <br />
+            error = white
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-6-21</div>
+          <a href="">ansible</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          PostgreSQL - List all tables in all schemas
+        </div>
+        <div class="description">
+          <p class="code">
+            \dt *.*
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-6-21</div>
+          <a href="">postgresql</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Push commits and tags simultaneously
+        </div>
+        <div class="description">
+          <p class="code">
+            git config --global push.followTags true
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-6-22</div>
+          <a href="">git</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Emojis in your console
+        </div>
+        <div class="description">
+          Instal the fonts-symbola package<br />
+          Download from https://packages.debian.org/sid/all/fonts-symbola/download
+          <p class="code">
+            sudo dpkg -i fonts-symbola_2.60-1_all.deb
+          </p>
+        </div>
+        <div class="references">
+            <a href="https://www.maketecheasier.com/use-emojis-in-linux/">maketecheasier - How to Use Emojis in Linux</a>
+          </div>
+        <div class="tags">
+          <div class="created-at">2019-7-29</div>
+          <a href="">debian</a><a href="">utf8</a><a href="">emoji</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Webpack won't process dependencies inside css modules :global rule
+        </div>
+        <div class="description">
+          Move those dependencies to a global css file instead
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-10-24</div>
+          <a href="">webpack</a><a href="">css modules</a>
+        </div>
+      </div>
+
+
+      <div class="tis">
+        <div class="title">
+          PostgreSQL listen_addresses format
+        </div>
+        <div class="description">
+          Don't mix "localhost" with ip addresses in postgresql.conf. If you need it use 127.0.0.1 instead.
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-10-25</div>
+          <a href="">postgresql</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Gthumb shows video in an external window
+        </div>
+        <div class="description">
+          Install <p class="code">gstreamer1.0-gtk3</p>
+        </div>
+        <div class="references">
+            <a href="https://forums.linuxmint.com/viewtopic.php?t=276382">Linux Mint Forums - Gthumb and video embebed problem</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-10-26</div>
+          <a href="">gthumb</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Control screen brightness without laptop special keys in linux
+        </div>
+        <div class="description">
+          <p class="code">
+            sudo apt-get install xbacklight
+            xbacklight -set 60
+          </p>
+        </div>
+        <div class="references">
+            <a href="https://askubuntu.com/questions/151651/brightness-is-reset-to-maximum-on-every-restart">Ask Ubuntu - Brightness is reset to maximum on every restart</a>
+          </div>
+        <div class="tags">
+          <div class="created-at">2019-10-26</div>
+          <a href="">linux</a><a href="">brightness</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Install PostgreSQL debugger plugin
+        </div>
+        <div class="description">
+          <p>Debugger installation:</p>
+          Install compilation dependenies and execute make and make install with USE_PGXS
+          <p class="code">
+            $ sudo apt-get install build-essential postgresql-server-dev-12 libssl-dev libkrb5-dev<br />
+            $ sudo git clone git://git.postgresql.org/git/pldebugger.git -C /usr/local/src/<br />
+            $ cd /usr/local/src/pldebugger/<br />
+            $ sudo USE_PGXS=1 make<br />
+            $ sudo USE_PGXS=1 make install<br />
+          </p>
+          <br />
+          Edit postgresql.conf. Find it with:
+          <p class="code">
+            # SHOW config_file;
+          </p>
+          Inside of postgresql.conf, Search for 'preload' (Ctrl + W in nano), Set "shared_preload_libraries" to:
+          <p class="code">
+            shared_preload_libraries = 'plugin_debugger'
+          </p>
+          <br />
+          Install the extension in your database
+          <p class="code">
+            $ sudo su - postgres<br />
+            $ psql database_name<br />
+            database_name=# CREATE EXTENSION pldbgapi;<br />
+          </p>
+          <br />
+          Restart the server
+          <p class="code">
+            sudo service postgresql restart
+          </p>
+        </div>
+        <div class="references">
+          <a href="https://gist.github.com/jhngrant/c1787346fcb4b0e3001a">jhngrant/postgresql-debugger-install-ubuntu</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-11-6</div>
+          <a href="">postgresql</a><a href="">
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Handle missing mouseup
+        </div>
+        <div class="description">
+          Attach it to the window object instead of the element that started the mousedown, this way it will even handle mouseup events outside the browser window.
+        </div>
+        <div class="references">
+          <a href="https://stackoverflow.com/questions/11533098/how-to-catch-mouse-up-event-outside-of-element">How to catch mouse-up event outside of element?</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-12-12</div>
+          <a href="">js</a><a href="">dom</a><a href="">browser</a>
+        </div>
+      </div>
+      <hr />
+    </div>
+  </body>
+</html>

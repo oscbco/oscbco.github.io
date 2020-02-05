@@ -1,0 +1,369 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./index.css">
+    <meta charset="UTF-8">
+    <title>oscbco's personal site - Today I learned</title>
+  </head>
+  <body>
+    <div id="nav">
+      <div>
+        <h1><a href="./index.html">oscbco</a></h1>
+        <a href="./index.html#about-me">About Me</a>
+        <a href="./today-i-solved.html">Today I Solved</a>
+        <a href="./practice.html">Practice</a>
+        <a href="./microblog.html">Microblog</a>
+      </div>
+    </div>
+
+    <div id="content">
+      <div class="portfolio-header">
+        <h1 class="tis-header">Practice</h1>
+      </div>
+      <div id="tis-collection">
+
+        <div class="tis">
+          <div class="title">
+            Make an inline element break out of its line
+          </div>
+          <div class="description">
+            When an inline element grows in size, its containing line grows with it.<br />
+            This behavior makes creating elements like drop-downs or tooltips problematic because they contain hidden
+            child elements which must "break out" of their parent's line.<br />
+            Setting the child as absolutely positioned relative to the parent won't work if they must be the same
+            size.<br />
+            An absolutely positioned element resides out of the document flow and can't push its parent to contain
+            it when it becomes larger than it.<br />
+            Below is a solution:
+          </div>
+          <div class="references">
+              <a href="https://codepen.io/oscbco/pen/VRvLEX">codepen.io/oscbco/pen/VRvLEX</a>
+            </div>
+          <div class="tags">
+            <div class="created-at">2018-9-5</div>
+            <a href="">html</a><a href="">inline</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Scrollbar behavior
+          </div>
+          <div class="description">
+              If an HTML element has a set height that height will include its scrollbar height.<br />
+              If not, the scrollbar height adds to the content height.<br />
+              As demonstrated here:
+          </div>
+          <div class="references">
+              <a href="https://codepen.io/oscbco/pen/QojyOm">codepen.io/oscbco/pen/QojyOm</a>
+            </div>
+          <div class="tags">
+            <div class="created-at">2018-9-5</div>
+            <a href="">html</a><a href="">inline</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Dark tab design
+          </div>
+          <div class="description">
+              Exploring a dark tab design:<br />
+          </div>
+          <div class="references">
+              <a href="https://codepen.io/oscbco/pen/VRegVW">codepen.io/oscbco/pen/VRegVW</a>
+            </div>
+          <div class="tags">
+            <div class="created-at">2018-5-23</div>
+            <a href="">html</a><a href="">UI</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            3-pane design
+          </div>
+          <div class="description">
+              Exploring a 3-pane design, made with CSS Grid:<br />
+              The panes can be arranged in 7 ways. Later Javascript can be used to switch between modes.<br />
+              The main advantage of this (apart from easy layout) is how panes can be reordered without changing their position in the source. This way tools like React can avoid useless re-rendering.
+          </div>
+          <div class="references">
+              <a href="https://codepen.io/oscbco/pen/KEVEMP">codepen.io/oscbco/pen/KEVEMP</a>
+            </div>
+          <div class="tags">
+            <div class="created-at">2018-5-19</div>
+            <a href="">html</a><a href="">UI</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Breadcrumb with css-only arrows
+          </div>
+          <div class="description">
+              Exploring a breadcrumb design, in which the arrows are made with css only:<br />
+          </div>
+          <div class="references">
+              <a href="https://codepen.io/oscbco/pen/XGXGZM">codepen.io/oscbco/pen/XGXGZM</a>
+            </div>
+          <div class="tags">
+            <div class="created-at">2017-4-17</div>
+            <a href="">html</a><a href="">UI</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Demoing flex-basis and flex-grow
+          </div>
+          <div class="references">
+              <a href="https://codepen.io/oscbco/pen/XGXQdZ">codepen.io/oscbco/pen/XGXQdZ</a>
+            </div>
+          <div class="tags">
+            <div class="created-at">2017-7-28</div>
+            <a href="">html</a><a href="">flexbox</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Exploring a tooltip (or text bubble) design with an svg arrow
+          </div>
+          <div class="references">
+              <a href="https://codepen.io/oscbco/pen/eXZBpQ">codepen.io/oscbco/pen/eXZBpQ</a>
+            </div>
+          <div class="tags">
+            <div class="created-at">2017-4-16</div>
+            <a href="">html</a><a href="">svg</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Exploring a breadcrumb design with an svg arrow
+          </div>
+          <div class="description">
+            <img src="./images/svg-arrows.png">
+          </div>
+          <div class="references">
+              <a href="https://codepen.io/oscbco/pen/drXOXb">codepen.io/oscbco/pen/drXOXb</a>
+            </div>
+          <div class="tags">
+            <div class="created-at">2017-4-14</div>
+            <a href="">html</a><a href="">svg</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            JS passes primitives by value and objects by reference.<br /> Demo:<br />
+          </div>
+          <div class="references">
+            <a href="https://repl.it/@oscbco/js-by-ref-val">repl.it/@oscbco/js-by-ref-val</a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-4-14</div>
+            <a href="">javascript</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Christmas Tree
+          </div>
+          <div class="description">
+            This was a programming assignment from high school - it was about making a Christmas tree in C -. Back then, it proved to be very difficult so I did it again to if it was easier this time around.
+          </div>
+          <div class="references">
+            <a href="https://repl.it/@oscbco/christmas-tree">repl.it/@oscbco/christmas-tree</a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-7-6</div>
+            <a href="">javascript</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Demoing javascript's labeled breaks:
+          </div>
+          <div class="references">
+            <a href="https://repl.it/@oscbco/labeled-breaks">repl.it/@oscbco/labeled-breaks</a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-7-6</div>
+            <a href="">javascript</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Demoing bcrypt
+          </div>
+          <p class="description">
+            Available at <a href="https://www.npmjs.com/package/bcrypt">npmjs.com/package/bcrypt</a>.<br />
+            The bcrypt package needs compilation, if you'd prefer to avoid that and use a js-only - albeit slower - package you can use: <a href="https://www.npmjs.com/package/bcryptjs">npmjs.com/package/bcryptjs</a>
+          </p>
+          <div class="references">
+            <a href="https://repl.it/@oscbco/bcrypt-demo">repl.it/@oscbco/bcrypt-demo</a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2018-9-24</div>
+            <a href="">javascript</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            try-catch blocks and asynchronous functions
+          </div>
+          <p class="description">
+            Asynchronous functions are executed out order in the call stack.
+            When the try-catch block executes, it will only "see" a successful call to a Webapi, and
+            when it's the turn for the Webapi to execute the try-catch block will have already completed
+            having seen no exceptions.<br />
+            And if an exception is thrown it won't be caught (Which in Node means an app crash).
+          </p>
+          <div class="references">
+            <a href="https://repl.it/@oscbco/try-catch-async-function">repl.it/@oscbco/try-catch-async-function</a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2015-9-4</div>
+            <a href="">javascript</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            This was my first iteration of the library continuous-arrays
+          </div>
+          <p class="description">
+            Suppose you declare several nested arrays and have a maximum of only one element per line,
+            this library would retrieve them based on the number of their corresponding line.
+          </p>
+          <div class="references">
+            <a href="https://repl.it/@oscbco/continuous-arrays">repl.it/@oscbco/continuous-arrays</a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-7-18</div>
+            <a href="">javascript</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Demoing Bubbling and Trickling Events in Javascript
+          </div>
+          <p class="description">
+            <b>Bubbling</b>: An event starts on the element that fired it, then bubbles up its parents.<br />
+            <b>Trickling</b>: An event starts with the outermost element first then trickles down until it reaches the element that fired it.<br />
+            <b>Mixed</b>: If bubbling and trickling event handlers are mixed, Trickling happens first.<br />
+          </p>
+          <div class="references">
+            <a href="https://codepen.io/oscbco/pen/eXgXQx">codepen.io/oscbco/pen/eXgXQxdcodex
+            </a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2015-5-31</div>
+            <a href="">javascript</a><a href="">browser</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Read a JSON file
+          </div>
+          <div class="references">
+            <b>With callbacks: </b><a href="https://repl.it/@oscbco/read-json-callbacks">repl.it/@oscbco/read-json-callbacks</a><br />
+            <b>With promises: </b><a href="https://repl.it/@oscbco/read-json-promises">repl.it/@oscbco/read-json-promises</a><br />
+            <br />
+            <b>Synchronously: </b><a href="https://repl.it/@oscbco/read-json-synchronously">repl.it/@oscbco/read-json-synchronously</a><br />
+          </div>
+          <div class="tags">
+            <div class="created-at">2015-9-3</div>
+            <a href="">javascript</a><a href="">nodejs</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Generating a PDF File using react-pdf
+          </div>
+          <div class="description">
+            <p class="code">
+              <span style="color: #66d9ef">import</span> <span style="color: #a6e22e">React</span> <span style="color: #a6e22e">from</span> <span style="color: #e6db74">&#39;react&#39;</span><span style="color: #f8f8f2">;</span><br />
+              <span style="color: #66d9ef">import</span> <span style="color: #f8f8f2">{</span> <span style="color: #a6e22e">Document</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">Page</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">Text</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">View</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">StyleSheet</span> <span style="color: #f8f8f2">}</span> <span style="color: #a6e22e">from</span> <span style="color: #e6db74">&#39;@react-pdf/renderer&#39;</span><span style="color: #f8f8f2">;</span><br />
+              <br />
+              <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">styles</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">StyleSheet</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">create</span><span style="color: #f8f8f2">({</span><br />
+              &nbsp;&nbsp;<span style="color: #a6e22e">page</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">{</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">flexDirection</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;row&#39;</span><span style="color: #f8f8f2">,</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">backgroundColor</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;#E4E4E4&#39;</span><br />
+              &nbsp;&nbsp;<span style="color: #f8f8f2">},</span><br />
+              &nbsp;&nbsp;<span style="color: #a6e22e">section</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">{</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">margin</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">10</span><span style="color: #f8f8f2">,</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">padding</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">10</span><span style="color: #f8f8f2">,</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a6e22e">flexGrow</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">1</span><br />
+              &nbsp;&nbsp;<span style="color: #f8f8f2">}</span><br />
+              <span style="color: #f8f8f2">});</span><br />
+              <br />
+              <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">MyDocument</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">()</span> <span style="color: #f92672">=&gt;</span> <span style="color: #f8f8f2">(</span><br />
+              &nbsp;&nbsp;<span style="color: #f92672">&lt;</span><span style="color: #a6e22e">Document</span><span style="color: #f92672">&gt;</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f92672">&lt;</span><span style="color: #a6e22e">Page</span> <span style="color: #a6e22e">size</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;A4&quot;</span> <span style="color: #a6e22e">style</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">{</span><span style="color: #a6e22e">styles</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">page</span><span style="color: #f8f8f2">}</span><span style="color: #f92672">&gt;</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f92672">&lt;</span><span style="color: #a6e22e">View</span> <span style="color: #a6e22e">style</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">{</span><span style="color: #a6e22e">styles</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">section</span><span style="color: #f8f8f2">}</span><span style="color: #f92672">&gt;</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f92672">&lt;</span><span style="color: #a6e22e">Text</span><span style="color: #f92672">&gt;</span><span style="color: #a6e22e">Section</span> #<span style="color: #ae81ff">1</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">/Text&gt;</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f92672">&lt;</span><span style="color: #a6e22e">/View&gt;</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f92672">&lt;</span><span style="color: #a6e22e">View</span> <span style="color: #a6e22e">style</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">{</span><span style="color: #a6e22e">styles</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">section</span><span style="color: #f8f8f2">}</span><span style="color: #f92672">&gt;</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f92672">&lt;</span><span style="color: #a6e22e">Text</span><span style="color: #f92672">&gt;</span><span style="color: #a6e22e">Section</span> #<span style="color: #ae81ff">2</span><span style="color: #f92672">&lt;</span><span style="color: #a6e22e">/Text&gt;</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f92672">&lt;</span><span style="color: #a6e22e">/View&gt;</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #f92672">&lt;</span><span style="color: #a6e22e">/Page&gt;</span><br />
+              &nbsp;&nbsp;<span style="color: #f92672">&lt;</span><span style="color: #a6e22e">/Document&gt;</span><br />
+              <span style="color: #f8f8f2">);</span>
+            </p>
+          </div>
+          <div class="references">
+            <a href="https://react-pdf.org">react-pdf.org/</a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2017-7-6</div>
+            <a href="">javascript</a><a href="">react</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Exploring an expandable treepanel design
+          </div>
+          <p class="description">
+            Nested elements allow for easy positioning
+          </p>
+          <div class="references">
+            <a href="https://jsfiddle.net/oscbco/stp9jwn2/">jsfiddle.net/oscbco/stp9jwn2
+            </a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-11-26</div>
+            <a href="">html</a><a href="">css</a><a href="">tree</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Exploring an static treepanel design
+          </div>
+          <p class="description">
+            This design doesn't rely on nested components, making it compatible with windowing
+          </p>
+          <div class="references">
+            <a href="https://jsfiddle.net/oscbco/stp9jwn2/">jsfiddle.net/oscbco/stp9jwn2
+            </a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2016-5-1</div>
+            <a href="">html</a><a href="">css</a><a href="">tree</a>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </div>
+  </body>
+</html>
