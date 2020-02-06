@@ -171,6 +171,12 @@ body.dark {
   float:left;
 }
 
+@-moz-document url-prefix() {
+  .tis {
+      float: none;
+  }
+}
+
 .tis > div {
   padding: 5px;
 }
