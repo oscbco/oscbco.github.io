@@ -362,6 +362,47 @@
             <a href="">html</a><a href="">css</a><a href="">tree</a>
           </div>
         </div>
+
+        <div class="tis">
+          <div class="title">
+            Replacing (not) matching characters in a string with a regular expression
+          </div>
+          <div class="description">
+            <p class="code">
+              <span style="color: #66d9ef">const</span> <span style="color: #a6e22e">sanitizedString</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">testString</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">replace</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">/[^a-zA-Z0-9]/gm</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">);</span>
+            </p>
+          </div>
+          <div class="references">
+            <a href="https://repl.it/@oscbco/replaceString">repl.it/@oscbco/replaceString</a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2020-2-5</div>
+            <a href="">js</a><a href="">string</a><a href="">regex</a>
+          </div>
+        </div>
+
+        <div class="tis">
+          <div class="title">
+            Function to check if a string is a palindrome
+          </div>
+          <div class="description">
+            <p class="code">
+              <span style="color: #66d9ef">function</span> <span style="color: #a6e22e">isPalindrome</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">testString</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><br />
+              &nbsp;&nbsp;<span style="color: #66d9ef">const</span> <span style="color: #a6e22e">sanitizedString</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">testString</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">toLowerCase</span><span style="color: #f8f8f2">().</span><span style="color: #a6e22e">replace</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">/[^a-zA-Z0-9]/gm</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">);</span><br />
+              &nbsp;&nbsp;<span style="color: #66d9ef">const</span> <span style="color: #a6e22e">sanitizedStringReversed</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Array.</span><span style="color: #a6e22e">from</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">sanitizedString</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">reverse</span><span style="color: #f8f8f2">().</span><span style="color: #a6e22e">join</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">);</span><br />
+              <br />
+              &nbsp;&nbsp;<span style="color: #66d9ef">return</span> <span style="color: #a6e22e">sanitizedStringReversed</span> <span style="color: #f92672">===</span> <span style="color: #a6e22e">sanitizedString</span><span style="color: #f8f8f2">;</span><br />
+              <span style="color: #f8f8f2">}</span>
+            </p>
+          </div>
+          <div class="references">
+            <a href="https://repl.it/@oscbco/testPalindrome">repl.it/@oscbco/testPalindrome</a>
+          </div>
+          <div class="tags">
+            <div class="created-at">2020-2-5</div>
+            <a href="">js</a><a href="">string</a><a href="">regex</a>
+          </div>
+        </div>
         <hr />
       </div>
     </div>
