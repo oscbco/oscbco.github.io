@@ -10,6 +10,14 @@
   flex-grow: 1
 }
 
+@media only screen and (max-width: 720px) {
+  .title-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .title {
   flex-grow: 1;
   font-size: 1.5rem;
@@ -22,6 +30,12 @@
 
 .title-name {
   letter-spacing: 0.5px;
+}
+
+@media only screen and (max-width: 720px) {
+  .title-name {
+    text-align: center;
+  }
 }
 
 .title-description {
@@ -37,6 +51,12 @@
   align-items: center;
   flex-grow: 1;
   width: 50%;
+}
+
+@media only screen and (max-width: 720px) {
+  .carrousel {
+    display: none;
+  }
 }
 
 .title-row .carrousel img {
@@ -71,6 +91,19 @@
   margin-bottom: 0.6rem;
 }
 
+@media only screen and (max-width: 720px) {
+  .section-item {
+    width: 6rem;
+    height: 6rem;
+    margin: 2rem 0.3rem;
+  }
+
+  .section-item > div {
+    width: 0.5rem;
+    /* min-width: 3rem; */
+  }
+}
+
 path {
   fill: currentColor;
 }
@@ -82,12 +115,12 @@ path {
  */
 
  .libraries {
-   /* min-height: 100vh; */
-   /* justify-content: space-evenly; */
  }
+
  .libraries h2 {
    margin: 2rem;
  }
+
  .libraries-row {
   display: flex;
   flex-direction: row;
@@ -153,6 +186,12 @@ path {
   padding: 2rem;
 }
 
+@media only screen and (max-width: 720px) {
+  .product-row {
+    padding: 1rem;
+  }
+}
+
 .product-row > div {
   flex-basis: 50%;
   text-align: center;
@@ -169,5 +208,4 @@ path {
 .product-row img {
   width: 100%;
   box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.5)
-
 }
