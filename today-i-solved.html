@@ -2284,6 +2284,22 @@
           <a href="">browser</a><a href="">css</a>
         </div>
       </div>
+
+      <div class="tis">
+        <div class="title">
+          Reduce js events by using data attributes
+        </div>
+        <div class="description">
+          Let's say you have a parent element with an event attached, next are its direct descendants with the data attribute you are using to differentiate them. <br /><br />
+          The problem lies in that the children of those second-level elements have to have a data attribute too, otherwise we won't be able to distinguish them.<br /> e.g. menu items with svg icons with multiple paths<br /><br />
+          To access the corresponding data attribute, without adding it to the descendants directly, you can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/closest">Element.closest</a>.<br /><br />
+          This searches up the document tree using a selector, and since the second level elements are guaranteed to have a data attribute, you can use this result and pass it to your function.
+        </div>
+        <div class="tags">
+          <div class="created-at">2020-2-10</div>
+          <a href="">browser</a><a href="">js</a><a href="">dom</a>
+        </div>
+      </div>
       <hr />
     </div>
   </body>
