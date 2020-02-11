@@ -175,18 +175,10 @@ body.dark {
   flex-direction: column;
   justify-content: stretch;
   break-inside: avoid;
-  width: 90%;
+  width: 99%;
   transform: translateY(1px);
-  /* float:left; */
   margin: auto;
   margin-bottom: 1.7em;
-}
-
-@-moz-document url-prefix() {
-  .tis {
-      float: none;
-      margin: auto;
-  }
 }
 
 .tis > div {
