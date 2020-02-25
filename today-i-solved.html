@@ -2316,6 +2316,34 @@
           <a href="">browser</a><a href="">js</a><a href="">dom</a>
         </div>
       </div>
+
+      <div class="tis">
+        <div class="title">
+          Get file permissions in octal and decimal
+        </div>
+        <div class="description">
+          <p class="code">
+            $ ls README.md -hal
+          </p>
+          <br />
+          Returns:
+          <p class="code">
+            -rwSr-Sr-T 1 user user 0 Feb 14 17:52 2A2A
+          </p>            
+          <p class="code">
+            $ stat --printf "%a " README.md && stat -c "%a" README.md | xargs -I PERM echo "obase=2; ibase=8; PERM" | bc
+          </p>
+          <br />
+          Returns:
+          <p class="code">
+            7644 111110100100
+          </p>          
+        </div>
+        <div class="tags">
+          <div class="created-at">2020-2-24</div>
+          <a href="">linux</a>
+        </div>
+      </div>
       <hr />
     </div>
   </body>
