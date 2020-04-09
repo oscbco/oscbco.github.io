@@ -2329,7 +2329,7 @@
           Returns:
           <p class="code">
             -rwSr-Sr-T 1 user user 0 Feb 14 17:52 2A2A
-          </p>            
+          </p>
           <p class="code">
             $ stat --printf "%a " README.md && stat -c "%a" README.md | xargs -I PERM echo "obase=2; ibase=8; PERM" | bc
           </p>
@@ -2337,7 +2337,7 @@
           Returns:
           <p class="code">
             7644 111110100100
-          </p>          
+          </p>
         </div>
         <div class="tags">
           <div class="created-at">2020-2-24</div>
@@ -2371,6 +2371,25 @@
         <div class="tags">
           <div class="created-at">2019-2-26</div>
           <a href="">js</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Use xclip to put a file in the clipboard
+        </div>
+        <div class="description">
+          Replace <span class="code-word">copy</span> with <span class="code-word">cut</span> if you want to move it
+          <p class="code">
+            <span style="color: #f8f8f2">$ echo</span> -ne <span style="color: #e6db74">&#39;copy\nfile:///path/to/file.txt&#39;</span> <span style="color: #e6db74">&#39;\0&#39;</span> | xclip -i -selection clipboard -t x-special/gnome-copied-files
+          </p>
+        </div>
+        <div class="references">
+          <a href="https://larsee.com/blog/2019/05/clipboard-files/">Lars - Copy-pasting files in the Linux terminal</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-4-9</div>
+          <a href="">linux</a><a href="">clipboard</a>
         </div>
       </div>
       <hr />
