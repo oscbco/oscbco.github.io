@@ -2392,6 +2392,37 @@
           <a href="">linux</a><a href="">clipboard</a>
         </div>
       </div>
+
+      <div class="tis">
+        <div class="title">
+          imagemagik vs sharp for creating thumbnails
+        </div>
+        <div class="description">
+          Imagemagick:
+          <p class="code">
+            $ time ./magick mogrify -path thumbnails_magick -thumbnail 100x100 originals/* -quality 50<br />
+            &nbsp;&nbsp;real  1m26.212s<br />
+            &nbsp;&nbsp;user  1m5.203s<br />
+            &nbsp;&nbsp;sys&nbsp; 0m20.560s
+          </p>
+          <br />Sharp:
+          <p class="code">
+            $ time node thumbnails.js<br />
+            &nbsp;&nbsp;real  0m1.716s<br />
+            &nbsp;&nbsp;user  0m3.858s<br />
+            &nbsp;&nbsp;sys&nbsp; 0m0.434s
+          </p>
+        </div>
+        <div class="references">
+          <a href="https://imagemagick.org/">Imagemagick</a><br />
+          <a href="https://github.com/lovell/sharp">Sharp</a><br />
+          <a href="https://gist.github.com/oscbco/8b33779b9e561f988506ac21696694fb">thumbnails.js gist</a>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-4-13</div>
+          <a href="">js</a><a href="">images</a>
+        </div>
+      </div>
       <hr />
     </div>
   </body>
