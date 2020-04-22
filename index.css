@@ -9,7 +9,7 @@
 
 
 * {
-
+  box-sizing: border-box;
   text-decoration: none;
 }
 
@@ -84,52 +84,6 @@ h1, h2 {
 #content {
   max-width: 1300px;
   margin: auto;
-}
-
-.project {
-  /* overflow: hidden; */
-  border: 1px solid gray;
-  border-radius: 3px;
-  /* box-shadow: 1px 1px 1px #444; */
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-
-  break-inside: avoid-column;
-  margin-bottom: 1.7em;
-  width: 100%;
-}
-
-body.dark {
-  background: #272727;
-}
-
-.project .title {
-  min-height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 900;
-}
-
-.project .description {
-  background: #EEE;
-  color: 3333;
-  flex-grow: 1;
-  min-height: 50px;
-}
-
-.project .tags {
-  position: relative;
-  background: #666;
-  color: #DDD;
-  text-align: right;
-  min-height: 20px;
-}
-
-.project .tags a {
-  margin-right: 5px;
-  display: inline-block;
 }
 
 /*
