@@ -34,6 +34,7 @@
 
 .title-name {
   letter-spacing: 0.5px;
+  font-weight: 900;
 }
 
 @media only screen and (max-width: 720px) {
@@ -46,6 +47,7 @@
   font-size: smaller;
   font-style: italic;
   text-align: center;
+  padding: 0 3rem;
 }
 
 .carrousel {
