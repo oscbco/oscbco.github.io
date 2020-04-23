@@ -47,7 +47,6 @@
   font-size: smaller;
   font-style: italic;
   text-align: center;
-  padding: 0 3rem;
 }
 
 .carrousel {
@@ -103,7 +102,7 @@
 .section-item > div {
   width: 3rem;
   min-width: 3rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
 }
 
 @media only screen and (max-width: 720px) {
@@ -114,13 +113,26 @@
   }
 
   .section-item > div {
-    width: 0.5rem;
-    /* min-width: 3rem; */
+    margin-top: -0.4rem;
+    width: 0.1rem;
+  }
+
+  .section-item > span {
+    margin-top: -0.1rem;
   }
 }
 
 path {
   fill: currentColor;
+}
+
+.go-to-nav {
+  vertical-align: middle;
+}
+.go-to-nav > div {
+  display: inline-flex;
+  width: 1.1rem;
+  transform: rotate(-90deg);
 }
 
 /*
@@ -133,6 +145,7 @@ path {
  }
  .libraries h2 {
    margin: 2rem;
+   letter-spacing: 0.13rem;
  }
  .libraries-row {
   display: flex;
