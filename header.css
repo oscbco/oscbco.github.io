@@ -1,9 +1,29 @@
 :root{
   --library-bg: #333;
+  --go-up: #ef3054;
+  --library-light-bg: #FFF;
+  --library-light-fg: #333;
+  --library-light: #FFF;
+  --library-title: #00A7E1;
+  --library-ansible-bg: #A9E5BB;
+  --library-ansible-fg: #333;
+  --shadow: rgba(0,0,0,0.5);
+  --shadow2: rgba(0,0,0,0.5);
 }
 
+path {
+  fill: currentColor;
+}
+
+/*
+ *
+ * HEADER
+ *
+ */
+
 #header {
-  background: #333  url('./images/noise-grainy.png');
+  background-image: url('./images/noise-grainy.png');
+  background-color: var(--library-bg);
   display: flex;
   flex-direction: column;
   height: calc(100vh - 41px);
@@ -11,7 +31,7 @@
 
 .title-row {
   display: flex;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 @media only screen and (max-width: 720px) {
@@ -33,8 +53,9 @@
 }
 
 .title-name {
-  letter-spacing: 0.5px;
+  letter-spacing: 0.05rem;
   font-weight: 900;
+  font-size: larger;
 }
 
 @media only screen and (max-width: 720px) {
@@ -58,19 +79,23 @@
   width: 50%;
 }
 
-.carrousel img {
-  box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.5)
-}
-
 @media only screen and (max-width: 720px) {
   .carrousel {
     display: none;
   }
 }
 
-.title-row .carrousel img {
+.carrousel img {
+  box-shadow: 0px 0px 10px -1px var(--shadow);
   max-width: 90%;
 }
+
+
+/*
+ *
+ * SECTIONS MENU
+ *
+ */
 
 .section-row {
   display: flex;
@@ -78,28 +103,28 @@
 }
 
 .section-item-wrapper {
-  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.95));
+  filter: drop-shadow(0px 0px 1px var(--shadow2));
 }
 
 .section-item {
+  background-image: url('./images/noise-background.png');
+  filter: brightness(75%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   position: relative;
+
   display: flex;
   flex-direction: column;
-  background: url('./images/noise-background.png');
-  filter: brightness(75%);
+  justify-content: center;
+  align-items: center;
+
   margin: 2rem;
   width: 7.5rem;
   height: 7.5rem;
   max-width: 7.5rem;
   max-height: 7.5rem;
-  /* border-radius: 50%; */
-  justify-content: center;
-  align-items: center;
-  /* box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.5); */
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
-.section-item > div {
+.section-icon {
   width: 3rem;
   min-width: 3rem;
   margin-bottom: 0.4rem;
@@ -112,37 +137,42 @@
     margin: 2rem 0.3rem;
   }
 
-  .section-item > div {
+  .section-icon {
     margin-top: -0.4rem;
     width: 0.1rem;
   }
 
-  .section-item > span {
+  .section-name {
     margin-top: -0.1rem;
+    letter-spacing: 0.1rem;
   }
-}
-
-path {
-  fill: currentColor;
-}
-
-.go-to-nav {
-  vertical-align: middle;
-}
-.go-to-nav > div {
-  display: inline-flex;
-  width: 1.1rem;
-  transform: rotate(-90deg);
 }
 
 /*
  *
- * Libraries
+ * GO UP ICON
  *
  */
 
- .libraries {
- }
+.go-up {
+  vertical-align: middle;
+}
+.go-up > div {
+  display: inline-flex;
+  width: 1.2rem;
+  transform: rotate(-90deg);
+  color: var(--go-up);
+}
+.go-up-sep {
+  color: #4f7cac
+}
+
+/*
+ *
+ * LIBRARIES
+ *
+ */
+
  .libraries h2 {
    margin: 2rem;
    letter-spacing: 0.13rem;
@@ -154,16 +184,17 @@ path {
   justify-content: center;
 }
 .library {
+  background: var(--library-bg);
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+  margin: 1rem;
+
   min-width: 15rem;
   min-height: 15rem;
   max-width: 15rem;
   max-height: 15rem;
   height: 15rem;
-  background: var(--library-bg);
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  border-radius: 3px;
 }
 .library > *:first-child {
   flex: 0;
@@ -177,25 +208,17 @@ path {
   display: block;
   height: 35%;
 }
-.library.light {
-  background: #FFF;
-}
 .library img {
+  display: block;
+  margin: auto;
   max-width: 14rem;
   max-height: 6.5rem;
-  margin: auto;
-  display: block;
 }
 .library-title {
+  background: var(--library-title);
   padding: 0.5rem;
   border-radius: 3px 3px 0 0;
   font-weight: bold;
-}
-.library-title.react {
-  background: #00A7E1;
-}
-.library-title.js {
-  background: #00A7E1;
 }
 .library-description {
   padding: 0.5rem;
@@ -203,19 +226,34 @@ path {
   letter-spacing: 0.4px;
   border-radius: 0 0 3px 3px;
 }
+
+/*
+ *
+ * LIBRARIES THEMES
+ *
+ */
+
+.light {
+  background: var(--library-light-bg);
+}
 .light .library-description {
   background: none;
-  color: #333;
+  color: var(--library-light-fg);
 }
 .ansible .library-title {
-  background: #A9E5BB;
-  color: #333;
+  background: var(--library-ansible-bg);
+  color:  var(--library-ansible-fg);
 }
-
 .ansible > .icon {
   width: 5rem;
   margin: auto;
 }
+
+/*
+ *
+ * PRODUCT
+ *
+ */
 
 .product-row {
   display: flex;
@@ -244,5 +282,5 @@ path {
 
 .product-row img {
   width: 100%;
-  box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.5)
+  box-shadow: 0px 0px 20px 1px  var(--shadow);
 }
