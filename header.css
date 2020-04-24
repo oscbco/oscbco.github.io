@@ -29,13 +29,13 @@ path {
   height: calc(100vh - 41px);
 }
 
-.title-row {
+.header-row {
   display: flex;
   flex-grow: 1;
 }
 
 @media only screen and (max-width: 720px) {
-  .title-row {
+  .header-row {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -52,10 +52,22 @@ path {
   width: 50%;
 }
 
+@media only screen and (max-width: 720px) {
+  .title {
+    width: 100%;
+  }
+}
+
 .title-name {
   letter-spacing: 0.05rem;
   font-weight: 900;
   font-size: larger;
+  margin: 0.30rem;
+}
+
+.title-email {
+  font-size: smaller;
+  margin: 0.3rem 0.35rem 0.35rem 0.35rem;
 }
 
 @media only screen and (max-width: 720px) {
@@ -64,10 +76,23 @@ path {
   }
 }
 
+.repo {
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  margin: 0.6rem;
+}
+.repo-icon {
+  margin: 0 0.4rem;
+  width: 1.4rem;
+  color: var(--go-up);
+}
+
 .title-description {
   font-size: smaller;
   font-style: italic;
   text-align: center;
+  margin: 1.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 .carrousel {
@@ -126,20 +151,19 @@ path {
 
 .section-icon {
   width: 3rem;
-  min-width: 3rem;
   margin-bottom: 0.4rem;
 }
 
 @media only screen and (max-width: 720px) {
   .section-item {
-    width: 6rem;
+    width: 5.5rem;
     height: 6rem;
     margin: 2rem 0.3rem;
   }
 
   .section-icon {
     margin-top: -0.4rem;
-    width: 0.1rem;
+    width: 2.5rem;
   }
 
   .section-name {
