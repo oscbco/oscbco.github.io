@@ -2474,6 +2474,51 @@
         </div>
       </div>
 
+      <div class="tis">
+        <div class="title">
+          Install Java
+        </div>
+        <div class="description">
+          <p class="code">
+            <span style="color: #f8f8f2">sudo</span> <span style="color: #f8f8f2">apt</span> <span style="color: #f8f8f2">update</span><br />
+            <span style="color: #f8f8f2">sudo</span> <span style="color: #f8f8f2">apt</span> <span style="color: #f8f8f2">upgrade</span><br />
+            <span style="color: #75715e"># Locate the latest java version</span><br />
+            <span style="color: #f8f8f2">sudo</span> <span style="color: #f8f8f2">apt</span> <span style="color: #f8f8f2">search</span> <span style="color: #f8f8f2">openjdk</span><br />
+            <span style="color: #f8f8f2">sudo</span> <span style="color: #f8f8f2">apt-get</span> <span style="color: #f8f8f2">install</span> <span style="color: #f8f8f2">openjdk-11-jdk</span><br />
+            <span style="color: #f8f8f2">update-alternatives</span> <span style="color: #f8f8f2">--config</span> <span style="color: #f8f8f2">java</span><br />
+            <span style="color: #f8f8f2">sudo</span> <span style="color: #f8f8f2">sh</span> <span style="color: #f8f8f2">-c</span> <span style="color: #e6db74">&#39;echo &quot;export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/&quot; &gt; /etc/profile.d/java.sh&#39;</span><br />
+            <span style="color: #75715e"># Make it readable</span><br />
+            <span style="color: #f8f8f2">sudo</span> <span style="color: #f8f8f2">chmod</span> <span style="color: #f8f8f2">og+r</span> <span style="color: #f8f8f2">/etc/profile.d/java.sh</span><br />
+            <span style="color: #75715e"># Add this line to ~/bashrc</span><br />
+            <span style="color: #f8f8f2">source</span> <span style="color: #f8f8f2">/etc/profile.d/java.sh</span><br />
+            <span style="color: #75715e"># Verify it exists</span><br />
+            <span style="color: #f8f8f2">echo</span> <span style="color: #f8f8f2">$JAVA_HOME</span><br />
+            <span style="color: #75715e"># Output: /usr/lib/jvm/java-11-openjdk-amd64/</span>
+          </p>
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-4-25</div>
+          <a href="">java</a>
+        </div>
+      </div>
+
+      <div class="tis">
+        <div class="title">
+          Chrome screenshot
+        </div>
+        <div class="description">
+          <span class="code-word">Ctrl + Shift + I</span>&nbsp; -> &nbsp;Open developer tools<br />
+          <span class="code-word">Ctrl + Shift + P</span>&nbsp; -> &nbsp;Show run command prompt<br />
+          Write "screenshot"<br />
+          Select one the commands available<br />
+          It's buggy, so be prepared to try several times. (Maybe try scrolling)
+        </div>
+        <div class="tags">
+          <div class="created-at">2019-4-25</div>
+          <a href="">javascript</a><a href="">eslint</a>
+        </div>
+      </div>
+
       <hr />
     </div>
   </body>
