@@ -186,10 +186,17 @@ path {
   width: 1.2rem;
   transform: rotate(-90deg);
   color: var(--go-up);
+  margin-top: -0.5px;
 }
 .go-up-sep {
-  color: #4f7cac
+  color: #4f7cac;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
+.go-up-text {
+  vertical-align: middle;
+}
+
 
 /*
  *
