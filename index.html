@@ -11,12 +11,10 @@
 
     <a name="nav"></a>
     <div id="nav">
-      <div>
-        <h1><a href="./index.html">oscbco</a></h1>
-        <a href="./today-i-solved.html">Today I Solved</a>
-        <a href="./practice.html">Practice</a>
-        <a href="./microblog.html">Microblog</a>
-      </div>
+      <a href="./index.html"><h1>oscbco</h1></a>
+      <a href="./today-i-solved.html">Today I Solved</a>
+      <a href="./practice.html">Practice</a>
+      <a href="./microblog.html">Microblog</a>
     </div>
 
     <div id="header">
@@ -186,9 +184,9 @@
           </div>
 
           <div class="library light">
-            <a href="https://www.github.com/oscbco/select"><div class="library-title react">select</div></a>
+            <a href="https://www.github.com/oscbco/select"><div class="library-title react">Inline Select</div></a>
             <a href="./images/select-demo.gif"><img src="./images/select-demo.gif" /></a>
-            <div class="library-description">A React select control you can inline</div>
+            <div class="library-description">A React select control you can put in a paragraph inlined with the rest of text</div>
           </div>
 
           <div class="library">
@@ -201,6 +199,14 @@
             <a href="https://www.github.com/oscbco/tree"><div class="library-title react">tree</div></a>
             <a href="./images/tree-demo.gif"><img src="./images/tree-demo.gif" /></a>
             <div class="library-description">A React tree control: Displays nested arrays as a foldable tree.<br />Handles a large number of elements by being virtualized</div>
+          </div>
+
+          <div class="library">
+            <a href="https://www.github.com/oscbco/block-select"><div class="library-title react">Select</div></a>
+            <a href="./images/block-select-demo.gif"><img src="./images/block-select-demo.gif" /></a>
+            <a href="https://www.github.com/oscbco/block-select">
+              <div class="library-description">A React select control</div>
+            </a>
           </div>
         </div>
       </div>
@@ -407,7 +413,7 @@
         resizeSection('header');
       })
       window.addEventListener('resize', () => {
-        resizeSection('header');
+        // resizeSection('header');
       })
   </script>
   </body>
