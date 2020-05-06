@@ -32,7 +32,8 @@
                 <span style="color: #f8f8f2">}</span><br />
                 <span style="color: #f8f8f2">export</span> <span style="color: #f8f8f2">PS1=</span><span style="color: #e6db74">&quot;\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ &quot;</span>
               </p>
-              It works by editing the PS1 (Prompt string 1) variable.<br />
+              <br />
+              It works by editing the <span class="code-word">PS1</span> (Prompt string 1) variable.<br />
             </div>
             <div class="references">
               <a href="http://coderwall.com/p/fasnya/add-git-branch-name-to-bash-prompt">Coderwall - Add git branch name to bash prompt</a>
@@ -64,7 +65,7 @@
           </div>
           <div class="description">
             <p class="code">
-              <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">name</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">See what groups am I in.</span><br />
+              <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">name</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">Register what groups I am in</span><br />
               &nbsp;&nbsp;<span style="color: #ae81ff">shell</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">groups</span><br />
               &nbsp;&nbsp;<span style="color: #ae81ff">register</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">usergroups</span><br />
               <br />
@@ -101,7 +102,7 @@
             Markdown preview in Visual Studio Code
           </div>
           <div class="description">
-            Open markdown preview to the side with ctrl+k then press v
+            Open markdown preview to the side with <span class="code-word">Ctrl+K</span> then press <span class="code-word">V</span>
           </div>
           <div class="tags">
             <div class="created-at">2017-11-16</div>
@@ -153,9 +154,6 @@
             <p class="code">
               <span style="color: #f8b6ce">$</span> <span style="color: #f8f8f2">nginx</span> <span style="color: #f8b6ce">-</span><span style="color: #f8f8f2">t</span>
             </p>
-          </div>
-          <div class="references">
-            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now">MDN - Performance.now</a>
           </div>
           <div class="tags">
             <div class="created-at">2016-9-16</div>
@@ -226,7 +224,7 @@
             Erase one word backwards in the linux shell
           </div>
           <div class="description">
-            Press ctrl + w
+            Press <span class="code-word">Ctrl+W</span>
           </div>
           <div class="tags">
             <div class="created-at">2016-9-4</div>
@@ -239,6 +237,7 @@
             List all event listeners
           </div>
           <div class="description">
+            In the console, write:
             <p class="code">
               <span style="color: #a6e22e">getEventListeners</span><span style="color: #f8f8f2">(document)</span>
             </p>
@@ -260,7 +259,7 @@
           </div>
           <div class="tags">
             <div class="created-at">2018-2-2</div>
-            <a href="">javascript</a><a href="">npm</a>
+            <a href="">javascript</a><a href="">node.js</a><a href="">npm</a>
           </div>
         </div>
 
@@ -269,7 +268,7 @@
             To install node_modules in a non-default location
           </div>
           <div class="description">
-            With the command line, you can use the --prefix option<br /><br />
+            With the command line, you can use the <span class="code-word">--prefix</span> option<br /><br />
             With ansible:<br />
             <p class="code">
               <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">name</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">APP Install node_modules on the parent directory for sharing</span><br />
@@ -279,6 +278,7 @@
               &nbsp;&nbsp;<span style="color: #ae81ff">shell</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">npm install {{ appdir_build }} --prefix={{ appdir_build }} --home=/opt/kanban</span>
             </p>
             <br />
+            With the shell:<br />
             <p class="code">
               $ <span style="color: #f8f8f2">sudo</span> <span style="color: #f8f8f2">su</span> <span style="color: #f8f8f2">-s</span> <span style="color: #f8f8f2">/bin/bash</span> <span style="color: #f8f8f2">app-web</span> <span style="color: #f8f8f2">-c</span> <span style="color: #e6db74">&#39;npm install /opt/kanban/build --prefix=/opt/kanban/build --home=/opt/kanban&#39;</span><br />
             </p>
@@ -338,7 +338,7 @@
 
         <div class="tis">
           <div class="title">
-            UI: panes vs subwindows vs modals<br />
+            panes vs subwindows vs modals<br />
           </div>
           <div class="description">
             <b>Subwindows</b>: Float freely and the user can freely resize, position, maximize, restore and close them<br />
@@ -384,7 +384,7 @@
 
         <div class="tis">
           <div class="title">
-            Enable ctrl-arrow for moving word by word in bash
+            Enable Ctrl-Arrow for moving word by word in bash
           </div>
           <div class="description">
             Add the following lines to ~/.inputrc
@@ -401,7 +401,7 @@
 
         <div class="tis">
           <div class="title">
-            Get last segment of a url
+            Get the last segment of a url
           </div>
           <div class="description">
             <p class="code">
@@ -526,7 +526,7 @@
             Cannot find java. Please use the --jdkhome switch
           </div>
           <div class="description">
-            Edit netbeans/netbeans-8.2/etc/netbeans.conf and set the corresponding setting. For example:
+            Edit <span class="code-word">netbeans/netbeans-8.2/etc/netbeans.conf</span> and set the corresponding setting. For example:
             <p class="code">
               netbeans_jdkhome="/usr/local/java/jdk1.8.0_131"
             </p>
@@ -559,7 +559,7 @@
           </div>
           <div class="description">
             <p class="code">
-              <span style="color: #75715e"># this will never report &#39;changed&#39; status</span><br />
+              <span style="color: #C8C6B2"># this will never report &#39;changed&#39; status</span><br />
               <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">shell</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">wall &#39;beep&#39;</span><br />
               &nbsp;&nbsp;<span style="color: #ae81ff">changed_when</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">False</span>
             </p>
@@ -575,7 +575,7 @@
             Test a single file from npm test using jest
           </div>
           <div class="description">
-            If npm test is an alias for "jest"
+            If <span class="code-word">npm test</span> is an alias for "jest"
             <p class="code">
               $ npm run test -- ./path/to/the/test/file.js
             </p>
@@ -591,7 +591,7 @@
             mkdir create parent directories
           </div>
           <div class="description">
-            no error if existing, make parent directories as needed
+            Doesn't fail if exists. Make parent directories as needed
             <p class="code">
               $ mkdir -p
             </p>
@@ -658,7 +658,7 @@
           Validate with visudo before copying sudoer file with Ansible
         </div>
         <div class="description">
-          Copy a new "sudoers" file into place, after passing validation with visudo
+          Copy a new <span class="code-word">sudoers</span> file into place, after passing validation with <span class="code-word">visudo</span>
           <p class="code">
             <span style="color: #f8f8f2">-</span> <span style="color: #ae81ff">template</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">src=/mine/sudoers dest=/etc/sudoers validate=&#39;visudo -cf %s&#39;</span>
           </p>
@@ -671,7 +671,7 @@
 
       <div class="tis">
         <div class="title">
-          match multiple strings at the same time with grep
+          Match multiple strings at the same time with grep
         </div>
         <div class="description">
           Use the pipe operator
@@ -727,7 +727,7 @@
           Create a new ssh key pair
         </div>
         <div class="description">
-          In ~/.ssh
+          In &nbsp;<span class="code-word">~/.ssh</span>
           <p class="code">
             $ ssh-keygen -t ed25519 -f ./vagrant_key -C "Key for all vagrant development machines"
           </p>
@@ -780,13 +780,13 @@
 
       <div class="tis">
         <div class="title">
-          PM2 processes.json file for an express app
+          Sample PM2 processes.json file for an express app
         </div>
         <div class="description">
           <p class="code">
             <span style="color: #f8f8f2">{</span><br />
             &nbsp;&nbsp;<span style="color: #e6db74">&quot;apps&quot;</span>&nbsp;:&nbsp;<span style="color: #f8f8f2">[{</span><br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e6db74">&quot;name&quot;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<span style="color: #e6db74">&quot;kanban&quot;</span><span style="color: #f8f8f2">,</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e6db74">&quot;name&quot;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<span style="color: #e6db74">&quot;appname&quot;</span><span style="color: #f8f8f2">,</span><br />
             &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e6db74">&quot;script&quot;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<span style="color: #e6db74">&quot;bin/www&quot;</span><span style="color: #f8f8f2">,</span><br />
             &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e6db74">&quot;watch&quot;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<span style="color: #e6db74">&quot;./&quot;</span><span style="color: #f8f8f2">,</span><br />
             &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e6db74">&quot;ignore_watch&quot;</span>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;node_modules&quot;</span><span style="color: #f8f8f2">],</span><br />
@@ -794,6 +794,7 @@
             &nbsp;&nbsp;<span style="color: #f8f8f2">}]</span><br />
             <span style="color: #f8f8f2">}</span>
           </p>
+          <br />
           Start PM2 with:
           <p class="code">
             $ pm2 start processes.json
@@ -811,7 +812,7 @@
           Show the desktop with Win+D in XFCE
         </div>
         <div class="description">
-          Add the following lines to the file ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml:
+          Add the following lines to the file <span class="code-word">~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml</span>:
           <p class="code">
             &lt;property name="&amp;lt;Super&amp;gt;d" type="string" value="show_desktop_key"/&gt;<br />
           </p>
@@ -827,7 +828,7 @@
           Show the taskbar in XFCE
         </div>
         <div class="description">
-          XFCE started without the taskbar. Press Alt + F2 and execute:
+          XFCE started without the taskbar. Press <span class="code-word">Alt+F2</span> and execute:
           <p class="code">
             xfce4-panel --preferences
           </p>
@@ -861,7 +862,7 @@
 
       <div class="tis">
         <div class="title">
-          Change the password of a postgresql user
+          Change the password of a PostgreSQL user
         </div>
         <div class="description">
           You'd have to use peer auth first:
@@ -880,7 +881,7 @@
           Using PM2 with Vagrant
         </div>
         <div class="description">
-          If you set up PM2 to watch files, enable usePolling in your ecosystem.config.js:
+          If you set up <span class="code-word">PM2</span> to watch files, enable <span class="code-word">usePolling</span> in your <span class="code-word">ecosystem.config.js</span>:
           <p class="code">
             usePolling: true
           </p>
@@ -914,9 +915,9 @@
           mkdir and cd all in one
         </div>
         <div class="description">
-          $_is a special parameter that holds the last argument of the previous command. The quote around $_ make sure it works even if the folder name contains spaces.
+          <span class="code-word">$_</span> is a special parameter that holds the last argument of the previous command. The quote around <span class="code-word">$_</span> make sure it works even if the folder name contains spaces.
           <p class="code">
-            mkdir foo && cd "$_"
+            $ mkdir foo && cd "$_"
           </p>
         </div>
         <div class="tags">
@@ -947,7 +948,7 @@
 
       <div class="tis">
         <div class="title">
-          Minutes to Hour and minutes in Java
+          Minutes to "Hour and minutes" in Java
         </div>
         <div class="description">
           If your time is in a variable called t
